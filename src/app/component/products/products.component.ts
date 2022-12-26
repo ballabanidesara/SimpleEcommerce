@@ -5,6 +5,7 @@ import { SelectItem } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
