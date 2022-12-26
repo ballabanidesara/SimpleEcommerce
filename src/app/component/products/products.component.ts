@@ -1,22 +1,52 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/service/api.service';
+import { Component } from '@angular/core';
+import { ProductService } from 'src/app/productservice';
+import { Product } from 'src/app/product';
+import { SelectItem } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.less']
+  styleUrls: ['./products.component.scss'],
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
+  public products: Observable<Product[]>;
 
-  public productList :any; 
+  sortOptions: SelectItem[];
 
-  constructor(private api: ApiService) { }
+  sortOrder: number;
 
-  ngOnInit(): void {
+  sortField: string;
 
-    this.api.getProduct().subscribe(res => {
-      this.productList = res;
-    })
+  constructor(
+    private productService: ProductService,
+    private primengConfig: PrimeNGConfig
+  ) {}
+
+  ngOnInit() {
+    this.productService.getProducts().subscribe((res) => {
+      this.products = res;
+    });
+
+    this.sortOptions = [
+      { label: 'Price High to Low', value: '!price' },
+      { label: 'Price Low to High', value: 'price' },
+    ];
+
+    
+    this.primengConfig.ripple = true;
   }
 
+  onSortChange(event) {
+    let value = event.value;
+
+    if (value.indexOf('!') === 0) {
+      this.sortOrder = -1;
+      this.sortField = value.substring(1, value.length);
+    } else {
+      this.sortOrder = 1;
+      this.sortField = value;
+    }
+  }
 }
