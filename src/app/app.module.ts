@@ -17,6 +17,9 @@ import {RatingModule} from 'primeng/rating';
 import {RippleModule} from 'primeng/ripple';
 import { ProductsComponent } from './component/products/products.component';
 import { HeaderComponent } from './component/header/header.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CartComponent } from './component/cart/cart.component';
+
 
 @NgModule({
   imports: [
@@ -31,9 +34,10 @@ import { HeaderComponent } from './component/header/header.component';
     RippleModule,
     HttpClientModule,
     RatingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  declarations: [ AppComponent, ProductsComponent, HeaderComponent ],
+  declarations: [ AppComponent, ProductsComponent, HeaderComponent, CartComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
