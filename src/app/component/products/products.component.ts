@@ -4,6 +4,7 @@ import { Product } from 'src/app/product';
 import { SelectItem } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
 import { Observable } from 'rxjs';
+import { CartService } from 'src/app/service/cart.service';
 
 
 @Component({
@@ -22,13 +23,21 @@ export class ProductsComponent {
 
   constructor(
     private productService: ProductService,
+    private cartService: CartService,
     private primengConfig: PrimeNGConfig
   ) {}
 
   ngOnInit() {
     this.productService.getProducts().subscribe((res) => {
       this.products = res;
-    });
+
+      this.products.forEach((a:any) => {
+        Object.assign(a,{quantity:1,total:a.price});
+      });
+
+    })
+  
+    
 
     this.sortOptions = [
       { label: 'Price High to Low', value: '!price' },
@@ -49,5 +58,9 @@ export class ProductsComponent {
       this.sortOrder = 1;
       this.sortField = value;
     }
+  }
+
+  addtocart(item: any){
+    this.cartService.addtoCart(item);
   }
 }
