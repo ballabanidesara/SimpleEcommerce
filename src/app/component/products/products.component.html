@@ -1,6 +1,31 @@
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+    <h6> All products &nbsp;<i class="pi pi-chevron-down"></i></h6> 
+    
+    </div>
+    <div class="item">
+      <h6> Men's Clothing &nbsp;<i class="pi pi-chevron-down"></i></h6> 
+    </div>
+    <div class="item">
+      <h6> Women's Clothing &nbsp;<i class="pi pi-chevron-down"></i></h6> 
+    </div>
+    <div class="item">
+      <h6> Jewelery &nbsp;<i class="pi pi-chevron-down"></i></h6> 
+    </div>
+    <div class="item">
+      <h6> Electronics &nbsp;<i class="pi pi-chevron-down"></i></h6> 
+    </div>
+  </div>
+</div>
+
+
+
+
 <div class="card">
-  <p-dataView #dv [value]="products" [paginator]="true" [rows]="1" filterBy="name"
-    [sortField]="sortField" [sortOrder]="sortOrder" layout="grid">
+
+  <p-dataView #dv [value]="products" [paginator]="true" [rows]="1" filterBy="name" [sortField]="sortField"
+    [sortOrder]="sortOrder" layout="grid">
     <ng-template pTemplate="header">
       <div class="flex flex-column md:flex-row md:justify-content-between">
         <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price"
