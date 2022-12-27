@@ -1,20 +1,28 @@
 <div class="card-top container-fluid">
   <div class="container d-flex">
+
     <div class="item">
-    <h6> All products &nbsp;<i class="pi pi-chevron-down"></i></h6> 
-    
+      <a (click)="filter('')">
+        <h6> All products &nbsp;<i class="pi pi-chevron-down"></i></h6>
+      </a>
+    </div>
+
+
+    <div class="item">
+      <a (click)="filter('clothes')">
+        <h6> Men/Women Clothes &nbsp;<i class="pi pi-chevron-down"></i></h6>
+      </a>
+    </div>
+
+    <div class="item">
+      <a (click)="filter('jewelery')">
+      <h6> Jewelery &nbsp;<i class="pi pi-chevron-down"></i></h6>
+      </a>
     </div>
     <div class="item">
-      <h6> Men's Clothing &nbsp;<i class="pi pi-chevron-down"></i></h6> 
-    </div>
-    <div class="item">
-      <h6> Women's Clothing &nbsp;<i class="pi pi-chevron-down"></i></h6> 
-    </div>
-    <div class="item">
-      <h6> Jewelery &nbsp;<i class="pi pi-chevron-down"></i></h6> 
-    </div>
-    <div class="item">
-      <h6> Electronics &nbsp;<i class="pi pi-chevron-down"></i></h6> 
+      <a (click)="filter('electronics')">
+        <h6> Electronics &nbsp;<i class="pi pi-chevron-down"></i></h6>
+      </a>
     </div>
   </div>
 </div>
@@ -40,7 +48,7 @@
 
         <div class="row">
 
-          <ng-container *ngFor="let item of products | filter:searchKey:'title'">
+          <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
             <div class="card col-md-3">
 
               <div class="product-grid-item-content">

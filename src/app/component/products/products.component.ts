@@ -13,32 +13,36 @@ import { CartService } from 'src/app/service/cart.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
-  searchKey:string ="";
-  public products: Observable<Product[]>;
 
+  searchKey: string = "";
+  public filterCategory: any;
+  public products: any;
   sortOptions: SelectItem[];
-
   sortOrder: number;
-
   sortField: string;
 
   constructor(
     private productService: ProductService,
     private cartService: CartService,
     private primengConfig: PrimeNGConfig
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.productService.getProducts().subscribe((res) => {
       this.products = res;
+      this.filterCategory = res;
 
-      this.products.forEach((a:any) => {
-        Object.assign(a,{quantity:1,total:a.price});
+      this.products.forEach((a: any) => {
+        if (a.category === "women's clothing" || a.category === "men's clothing") {
+          a.category = "clothes"
+        }
+
+        Object.assign(a, { quantity: 1, total: a.price });
       });
 
     });
-  
-    this.cartService.search.subscribe((val:any)=>{
+
+    this.cartService.search.subscribe((val: any) => {
       this.searchKey = val;
     })
 
@@ -47,7 +51,7 @@ export class ProductsComponent {
       { label: 'Price Low to High', value: 'price' },
     ];
 
-    
+
     this.primengConfig.ripple = true;
   }
 
@@ -63,7 +67,15 @@ export class ProductsComponent {
     }
   }
 
-  addtocart(item: any){
+  addtocart(item: any) {
     this.cartService.addtoCart(item);
+  }
+  filter(category: string) {
+    this.filterCategory = this.products
+      .filter((a: any) => {
+        if (a.category == category || category == '') {
+          return a;
+        }
+      })
   }
 }
