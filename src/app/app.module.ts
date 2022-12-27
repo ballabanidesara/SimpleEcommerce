@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -19,6 +20,7 @@ import { ProductsComponent } from './component/products/products.component';
 import { HeaderComponent } from './component/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './component/cart/cart.component';
+import { FilterPipe } from './shared/filter.pipe';
 
 
 @NgModule({
@@ -35,9 +37,10 @@ import { CartComponent } from './component/cart/cart.component';
     HttpClientModule,
     RatingModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
-  declarations: [ AppComponent, ProductsComponent, HeaderComponent, CartComponent ],
+  declarations: [ AppComponent, ProductsComponent, HeaderComponent, CartComponent, FilterPipe ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })

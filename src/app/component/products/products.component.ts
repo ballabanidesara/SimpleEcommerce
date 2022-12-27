@@ -13,6 +13,7 @@ import { CartService } from 'src/app/service/cart.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
+  searchKey:string ="";
   public products: Observable<Product[]>;
 
   sortOptions: SelectItem[];
@@ -35,9 +36,11 @@ export class ProductsComponent {
         Object.assign(a,{quantity:1,total:a.price});
       });
 
-    })
+    });
   
-    
+    this.cartService.search.subscribe((val:any)=>{
+      this.searchKey = val;
+    })
 
     this.sortOptions = [
       { label: 'Price High to Low', value: '!price' },
