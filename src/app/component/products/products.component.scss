@@ -12,6 +12,7 @@
 
 }
 
+
 .flex-column {
     -ms-flex-direction: column !important;
     flex-direction: column !important;
@@ -46,7 +47,6 @@
     padding: 30px;
     margin: 40px;
     margin-top: 50px;
-
 }
 
 
@@ -74,7 +74,18 @@
     border-color: #0c2261;
 
     &:hover {
-        background-color: #102869 !important;
+        background-color: #2a2b30 !important;
+    }
+}
+
+h5 {
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 600;
+
+    &:hover {
+        color: rgb(84, 83, 85) !important;
+       
     }
 }
 
@@ -83,7 +94,7 @@ p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100ch
+    max-width: 100ch;
 }
 
 // Menu Style
@@ -95,7 +106,15 @@ p {
 .d-flex {
     display: -ms-flexbox !important;
     display: flex !important;
-    margin-top: 120px;
+    margin-top: 90px;
+}
+
+.card-top.container-fluid {
+    background-color: rgb(240, 236, 236);
+    color: #0c2261;
+    cursor: pointer;
+    height: 60px;
+
 }
 
 .item {
@@ -105,4 +124,20 @@ p {
 
 .pi-chevron-down:before {
     font-size: 12px;
+    font-weight: 600;
+}
+
+:host::ng-deep {
+
+    .p-paginator-page,
+    .p-paginator-next,
+    .p-paginator-last,
+    .p-paginator-first,
+    .p-paginator-prev,
+    .p-paginator-current {
+        border: none;
+        margin: 10px;
+        color: grey;
+    }
+
 }

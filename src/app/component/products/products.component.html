@@ -3,42 +3,35 @@
 
     <div class="item">
       <a (click)="filter('')">
-        <h6> All products &nbsp;<i class="pi pi-chevron-down"></i></h6>
+        <h5> All products &nbsp;<i class="pi pi-chevron-down"></i></h5>
       </a>
     </div>
-
-
     <div class="item">
       <a (click)="filter('clothes')">
-        <h6> Men/Women Clothes &nbsp;<i class="pi pi-chevron-down"></i></h6>
+        <h5> Men/Women Clothes &nbsp;<i class="pi pi-chevron-down"></i></h5>
       </a>
     </div>
-
     <div class="item">
       <a (click)="filter('jewelery')">
-      <h6> Jewelery &nbsp;<i class="pi pi-chevron-down"></i></h6>
+        <h5> Jewelery &nbsp;<i class="pi pi-chevron-down"></i></h5>
       </a>
     </div>
     <div class="item">
       <a (click)="filter('electronics')">
-        <h6> Electronics &nbsp;<i class="pi pi-chevron-down"></i></h6>
+        <h5> Electronics &nbsp;<i class="pi pi-chevron-down"></i></h5>
       </a>
     </div>
   </div>
 </div>
 
 
-
-
 <div class="card">
-
-  <p-dataView #dv [value]="products" [paginator]="true" [rows]="1" filterBy="name" [sortField]="sortField"
-    [sortOrder]="sortOrder" layout="grid">
+  <p-dataView #dv [value]="products" [paginator]="true" [rows]="1" [sortField]="sortField" [sortOrder]="sortOrder"
+    layout="grid">
     <ng-template pTemplate="header">
       <div class="flex flex-column md:flex-row md:justify-content-between">
         <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price"
           (onChange)="onSortChange($event)" styleClass="mb-5 md:mb-0"></p-dropdown>
-
       </div>
 
     </ng-template>
