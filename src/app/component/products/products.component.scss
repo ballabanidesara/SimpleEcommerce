@@ -4,6 +4,8 @@
     border-width: 1px 0 1px 0;
     padding: 1rem;
     font-weight: 600;
+    margin-top: 11rem;
+    margin-right: 6rem;
 
     .p-dropdown-trigger {
         border: 1px solid grey;
@@ -11,7 +13,6 @@
     }
 
 }
-
 
 .flex-column {
     -ms-flex-direction: column !important;
@@ -31,22 +32,14 @@
 }
 
 
-// .card-top {
-//     position: relative;
-//     display: flex;
-//     flex-direction: column;
-//     min-width: 0;
-//     word-wrap: break-word;
-//     background: #fff;
-//     background-clip: border-box;
-//     border: 1px solid rgba(0, 0, 0, 0.2);
-//     border-radius: .25rem;
-// }
-
 .card {
     padding: 30px;
     margin: 40px;
-    margin-top: 50px;
+
+}
+
+div.row {
+    margin-top: 16rem;
 }
 
 
@@ -79,13 +72,13 @@
 }
 
 h5 {
-    margin-top: 20px;
-    font-size: 17px;
+    margin-top: 25px;
+    font-size: 15px;
     font-weight: 600;
 
     &:hover {
         color: rgb(84, 83, 85) !important;
-       
+
     }
 }
 
@@ -99,21 +92,23 @@ p {
 
 // Menu Style
 
-.card-top {
-    border: none;
-}
 
 .d-flex {
     display: -ms-flexbox !important;
     display: flex !important;
-    margin-top: 90px;
+
 }
 
 .card-top.container-fluid {
     background-color: rgb(240, 236, 236);
     color: #0c2261;
     cursor: pointer;
-    height: 60px;
+    height: 70px;
+    position: fixed;
+    top: 90px;
+    width: 100%;
+    z-index: 102;
+
 
 }
 
@@ -138,6 +133,8 @@ p {
         border: none;
         margin: 10px;
         color: grey;
+        margin-top: 11rem;
+        margin-bottom: 40px;
     }
 
 }

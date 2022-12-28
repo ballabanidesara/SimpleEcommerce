@@ -3,12 +3,12 @@
 
     <div class="item">
       <a (click)="filter('')">
-        <h5> All products &nbsp;<i class="pi pi-chevron-down"></i></h5>
+        <h5> All items &nbsp;<i class="pi pi-chevron-down"></i></h5>
       </a>
     </div>
     <div class="item">
       <a (click)="filter('clothes')">
-        <h5> Men/Women Clothes &nbsp;<i class="pi pi-chevron-down"></i></h5>
+        <h5> Clothes &nbsp;<i class="pi pi-chevron-down"></i></h5>
       </a>
     </div>
     <div class="item">
@@ -25,7 +25,7 @@
 </div>
 
 
-<div class="card">
+<div class="container">
   <p-dataView #dv [value]="products" [paginator]="true" [rows]="1" [sortField]="sortField" [sortOrder]="sortOrder"
     layout="grid">
     <ng-template pTemplate="header">
