@@ -1,23 +1,9 @@
 // Product Card Style
-:host ::ng-deep .p-dropdown {
-    width: 14.5rem;
-    border-width: 1px 0 1px 0;
-    padding: 1rem;
-    font-weight: 600;
-    margin-top: 11rem;
-    margin-right: 6rem;
-
-    .p-dropdown-trigger {
-        border: 1px solid grey;
-        background-color: rgb(170, 168, 168) !important;
-    }
-
-}
 
 .flex-column {
     -ms-flex-direction: column !important;
     flex-direction: column !important;
-    text-align: right;
+    text-align: left;
     height: 5px;
 }
 
@@ -39,7 +25,7 @@
 }
 
 div.row {
-    margin-top: 16rem;
+    margin-top: 18rem;
 }
 
 
@@ -73,7 +59,7 @@ div.row {
 
 h5 {
     margin-top: 25px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
 
     &:hover {
@@ -90,7 +76,15 @@ p {
     max-width: 100ch;
 }
 
-// Menu Style
+.instruction {
+    font-size: 14px;
+    border-radius: 4px;
+    width: 56%;
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    background-color: #fdefd6;
+}
 
 
 .d-flex {
@@ -108,8 +102,6 @@ p {
     top: 90px;
     width: 100%;
     z-index: 102;
-
-
 }
 
 .item {
@@ -128,13 +120,37 @@ p {
     .p-paginator-next,
     .p-paginator-last,
     .p-paginator-first,
-    .p-paginator-prev,
-    .p-paginator-current {
+    .p-paginator-prev {
         border: none;
         margin: 10px;
         color: grey;
-        margin-top: 11rem;
+        margin-top: 9rem;
         margin-bottom: 40px;
     }
+}
 
+:host ::ng-deep .p-dropdown {
+    width: 14.5rem;
+    border-width: 1px 0 1px 0;
+    padding: 1rem;
+    font-weight: 600;
+    margin-top: 13rem;
+    margin-right: 6rem;
+
+    .p-dropdown-trigger {
+        border: 1px solid grey;
+        background-color: rgb(170, 168, 168) !important;
+    }
+
+    .p-dropdown-item {
+        cursor: pointer;
+        text-align: right;
+        font-size: 14px;
+        margin-left: 15px;
+
+    }
+
+    input.p-element {
+        font-size: 15px;
+    }
 }
