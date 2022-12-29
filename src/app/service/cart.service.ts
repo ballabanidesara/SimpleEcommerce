@@ -22,16 +22,26 @@ export class CartService {
   }
 
   addtoCart(product : any){
-    this.cartItemList.push(product);
-    this.productList.next(this.cartItemList);
-    this.getTotalPrice();
-    console.log(this.cartItemList)
+    const productExistInCart = this.cartItemList.find(({ title }) => title === product.title); // find product by name
+    if (!productExistInCart) {
+      this.cartItemList.push(product);
+      this.productList.next(this.cartItemList);
+      this.getTotalPrice();
+      return;
+    }
+    productExistInCart.quantity += 1;
+
+
+    // this.cartItemList.push(product);
+    // this.productList.next(this.cartItemList);
+    // this.getTotalPrice();
+    // console.log(this.cartItemList)
   }
 
-  getTotalPrice() : number{
+  getTotalPrice(): number {
     let grandTotal = 0;
-    this.cartItemList.map((a:any)=>{
-      grandTotal += a.total;
+    this.cartItemList.map((a: any) => {
+      grandTotal += a.quantity * a.price
     })
     return grandTotal;
   }
