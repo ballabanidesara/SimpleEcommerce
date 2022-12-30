@@ -116,7 +116,6 @@
       }
     }
   },
-  "defaultProject": "simple-ecommerce",
   "cli": {
     "analytics": "e275bbe6-ebda-4a36-be4e-16c78dac9bc4"
   }
