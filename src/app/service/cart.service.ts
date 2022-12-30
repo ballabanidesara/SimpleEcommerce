@@ -16,13 +16,13 @@ export class CartService {
     return this.productList.asObservable();
   }
 
-  setProduct(product : any){
+  setProduct(product: any) {
     this.cartItemList.push(...product);
     this.productList.next(product);
   }
 
-  addtoCart(product : any){
-    const productExistInCart = this.cartItemList.find(({ title }) => title === product.title); // find product by name
+  addtoCart(product: any) {
+    const productExistInCart = this.cartItemList.find(({ title }) => title === product.title);
     if (!productExistInCart) {
       this.cartItemList.push(product);
       this.productList.next(this.cartItemList);
@@ -31,11 +31,6 @@ export class CartService {
     }
     productExistInCart.quantity += 1;
 
-
-    // this.cartItemList.push(product);
-    // this.productList.next(this.cartItemList);
-    // this.getTotalPrice();
-    // console.log(this.cartItemList)
   }
 
   getTotalPrice(): number {
@@ -45,15 +40,15 @@ export class CartService {
     })
     return grandTotal;
   }
-  removeCartItem(product: any){
-    this.cartItemList.map((a:any, index:any)=>{
-      if(product.id === a.id){
-        this.cartItemList.splice(index,1);
+  removeCartItem(product: any) {
+    this.cartItemList.map((a: any, index: any) => {
+      if (product.id === a.id) {
+        this.cartItemList.splice(index, 1);
       }
     })
     this.productList.next(this.cartItemList);
   }
-  removeAllCart(){
+  removeAllCart() {
     this.cartItemList = []
     this.productList.next(this.cartItemList);
   }

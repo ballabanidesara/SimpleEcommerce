@@ -8,18 +8,26 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class HeaderComponent implements OnInit {
 
-  public totalItem : number = 0;
   public searchTerm !: string;
-  constructor(private cartService : CartService) { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.cartService.getProducts()
-    .subscribe(res=>{
-      this.totalItem = res.length;
-    })
+
   }
 
-  search(event:any){
+  public get cartLength(): number {
+    let cartLength = this.cartService.cartItemList.reduce(
+      (sum, r) => (sum += r.quantity),
+      0
+    );
+
+    if (cartLength > 99) {
+      cartLength = 99;
+    }
+    return cartLength;
+  }
+
+  search(event: any) {
     this.searchTerm = (event.target as HTMLInputElement).value;
     this.cartService.search.next(this.searchTerm);
   }
