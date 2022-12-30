@@ -18,6 +18,7 @@ export class ProductsComponent {
   public filterCategory: any;
   public products: any;
   sortOptions: SelectItem[];
+  categorysortOptions: SelectItem[];
   sortOrder: number;
   sortField: string;
 
@@ -51,6 +52,11 @@ export class ProductsComponent {
       { label: 'Price Low to High', value: 'price' },
     ];
 
+
+    this.categorysortOptions = [
+      { label: 'Clothes, Electronics, Jewelery', value: 'category' },
+      { label: 'Jewelery, Electronics, Clothes', value: '!category' },
+    ];
 
     this.primengConfig.ripple = true;
   }

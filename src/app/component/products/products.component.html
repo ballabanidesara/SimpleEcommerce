@@ -34,7 +34,7 @@
         <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="sort by price..."
           (onChange)="onSortChange($event)" styleClass="mb-5 md:mb-0"></p-dropdown>
       </div>
-      <p-dropdown [(ngModel)]="sortKey" placeholder="sort by category..."
+      <p-dropdown [options]="categorysortOptions" [(ngModel)]="sortKey" placeholder="sort by category..."
         (onChange)="onSortChange($event)" styleClass="mb-5 md:mb-0"></p-dropdown>
     </ng-template>
 
