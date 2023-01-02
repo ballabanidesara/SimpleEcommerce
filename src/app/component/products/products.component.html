@@ -1,26 +1,32 @@
 <div class="card-top container-fluid">
   <div class="container d-flex">
 
-    <div class="item">
-      <a (click)="filter('')">
+    <select class="form-control" (change)="filterrCategory($event)">
+      <option value="all" selected> All</option>
+      <option value="{{option}}" *ngFor="let option of categories">{{option}}</option>
+
+    </select>
+
+    <!-- <div class="item">
+      <a (click)="filterrCategory($event)">
         <h5> All items &nbsp;<i class="pi pi-chevron-down"></i></h5>
       </a>
     </div>
     <div class="item">
-      <a (click)="filter('clothes')">
+      <a (click)="filterrCategory($event)">
         <h5> Clothes &nbsp;<i class="pi pi-chevron-down"></i></h5>
       </a>
     </div>
     <div class="item">
-      <a (click)="filter('jewelery')">
+      <a (click)="filterrCategory($event)">
         <h5> Jewelery &nbsp;<i class="pi pi-chevron-down"></i></h5>
       </a>
     </div>
     <div class="item">
-      <a (click)="filter('electronics')">
+      <a (click)="filterrCategory($event)">
         <h5> Electronics &nbsp;<i class="pi pi-chevron-down"></i></h5>
       </a>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -43,7 +49,7 @@
 
         <div class="row">
 
-          <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+          <ng-container *ngFor="let item of products | filter:searchKey:'title'">
             <div class="card col-md-3">
 
               <div class="product-grid-item-content">

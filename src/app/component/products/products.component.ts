@@ -13,12 +13,13 @@ import { CartService } from 'src/app/service/cart.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
-
   searchKey: string = "";
   public filterCategory: any;
-  public products: any;
   sortOptions: SelectItem[];
   categorysortOptions: SelectItem[];
+  categories: any[] = [];
+  // products: any[] = [];
+  public products: any;
   sortOrder: number;
   sortField: string;
 
@@ -29,23 +30,31 @@ export class ProductsComponent {
   ) { }
 
   ngOnInit() {
-    this.productService.getProducts().subscribe((res) => {
-      this.products = res;
-      this.filterCategory = res;
+    this.getProducts()
+    this.getCategories()
+    // this.productService.getAllProducts().subscribe((res) => {
+    //   this.products = res;
+    //   this.filterCategory = res;
 
-      this.products.forEach((a: any) => {
-        if (a.category === "women's clothing" || a.category === "men's clothing") {
-          a.category = "clothes"
-        }
+    //   this.products.forEach((a: any) => {
+    //     // if (a.category === "women's clothing" || a.category === "men's clothing") {
+    //     //   a.category = "clothes"
+    //     // }
 
-        Object.assign(a, { quantity: 1, total: a.price });
-      });
 
-    });
 
-    this.cartService.search.subscribe((val: any) => {
-      this.searchKey = val;
-    })
+    //     Object.assign(a, { quantity: 1, total: a.price });
+    //   });
+
+    // });
+
+
+
+    // this.cartService.search.subscribe((val: any) => {
+    //   this.searchKey = val;
+    // })
+
+
 
     this.sortOptions = [
       { label: 'Price High to Low', value: '!price' },
@@ -60,6 +69,45 @@ export class ProductsComponent {
 
     this.primengConfig.ripple = true;
   }
+
+  getProducts() {
+    this.productService.getAllProducts().subscribe((res: any) => {
+      this.products = res;
+      //   console.log(res)
+      //   this.products = res;
+      // }, error => {
+      //   alert(error)
+    })
+  }
+
+
+
+  getCategories() {
+    this.productService.getAllCategories().subscribe((res: any) => {
+      this.categories = res;
+      //   console.log(res)
+      //   this.categories = res;
+      // }, error => {
+      //   alert(error)
+    })
+  }
+
+  filterrCategory(event: any) {
+    let value = event.target.value;
+    if (value == "all") {
+      this.getProducts()
+    }
+    else {
+      this.getProductsCategory(value)
+    }
+  }
+
+  getProductsCategory(keyword: string) {
+    this.productService.getProductsByCategory(keyword).subscribe((res: any) => {
+      this.products = res;
+    })
+  }
+
 
   onSortChange(event) {
     let value = event.value;
@@ -76,12 +124,14 @@ export class ProductsComponent {
   addtocart(item: any) {
     this.cartService.addtoCart(item);
   }
-  filter(category: string) {
-    this.filterCategory = this.products
-      .filter((a: any) => {
-        if (a.category == category || category == '') {
-          return a;
-        }
-      })
-  }
+
+
+  // filter(category: string) {
+  //   this.filterCategory = this.products
+  //     .filter((a: any) => {
+  //       if (a.category == category || category == '') {
+  //         return a;
+  //       }
+  //     })
+  // }
 }
