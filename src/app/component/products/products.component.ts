@@ -15,11 +15,10 @@ import { CartService } from 'src/app/service/cart.service';
 export class ProductsComponent {
   searchKey: string = "";
   quantity: number = 1;
-  public filterCategory: any;
+  public products: any;
   sortOptions: SelectItem[];
   categorysortOptions: SelectItem[];
   categories: any[] = [];
-  public products: any;
   sortOrder: number;
   sortField: string;
 
@@ -30,10 +29,8 @@ export class ProductsComponent {
   ) { }
 
   ngOnInit() {
-    this.getCategories()
     this.productService.getAllProducts().subscribe((res) => {
       this.products = res;
-      this.filterCategory = res;
       this.products.forEach((a: any) => {
         Object.assign(a, { quantity: 1, total: a.price });
       });
@@ -55,6 +52,7 @@ export class ProductsComponent {
     ];
 
     this.primengConfig.ripple = true;
+    this.getCategories()
   }
 
   getProducts() {
