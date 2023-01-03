@@ -14,6 +14,7 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class ProductsComponent {
   searchKey: string = "";
+  quantity: number = 1;
   public filterCategory: any;
   sortOptions: SelectItem[];
   categorysortOptions: SelectItem[];
@@ -30,29 +31,29 @@ export class ProductsComponent {
   ) { }
 
   ngOnInit() {
-    this.getProducts()
+    // this.getProducts()
     this.getCategories()
-    // this.productService.getAllProducts().subscribe((res) => {
-    //   this.products = res;
-    //   this.filterCategory = res;
+    this.productService.getAllProducts().subscribe((res) => {
+      this.products = res;
+      this.filterCategory = res;
 
-    //   this.products.forEach((a: any) => {
-    //     // if (a.category === "women's clothing" || a.category === "men's clothing") {
-    //     //   a.category = "clothes"
-    //     // }
-
-
-
-    //     Object.assign(a, { quantity: 1, total: a.price });
-    //   });
-
-    // });
+      this.products.forEach((a: any) => {
+        // if (a.category === "women's clothing" || a.category === "men's clothing") {
+        //   a.category = "clothes"
+        // }
 
 
 
-    // this.cartService.search.subscribe((val: any) => {
-    //   this.searchKey = val;
-    // })
+        Object.assign(a, { quantity: 1, total: a.price });
+      });
+
+    });
+
+
+
+    this.cartService.search.subscribe((val: any) => {
+      this.searchKey = val;
+    })
 
 
 
@@ -63,8 +64,8 @@ export class ProductsComponent {
 
 
     this.categorysortOptions = [
-      { label: 'Clothes, Electronics, Jewelery', value: 'category' },
-      { label: 'Jewelery, Electronics, Clothes', value: '!category' },
+      { label: 'Sort from A-Z', value: 'category' },
+      { label: 'Sort from Z-A', value: '!category' },
     ];
 
     this.primengConfig.ripple = true;
@@ -73,10 +74,6 @@ export class ProductsComponent {
   getProducts() {
     this.productService.getAllProducts().subscribe((res: any) => {
       this.products = res;
-      //   console.log(res)
-      //   this.products = res;
-      // }, error => {
-      //   alert(error)
     })
   }
 
@@ -85,14 +82,10 @@ export class ProductsComponent {
   getCategories() {
     this.productService.getAllCategories().subscribe((res: any) => {
       this.categories = res;
-      //   console.log(res)
-      //   this.categories = res;
-      // }, error => {
-      //   alert(error)
     })
   }
 
-  filterrCategory(event: any) {
+  filterProductsCategory(event: any) {
     let value = event.target.value;
     if (value == "all") {
       this.getProducts()

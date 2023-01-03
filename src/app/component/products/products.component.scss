@@ -89,12 +89,17 @@ p {
 .card-top.container-fluid {
     background-color: rgb(240, 236, 236);
     color: #0c2261;
-    cursor: pointer;
-    height: 70px;
+    height: 100px;
     position: fixed;
     top: 90px;
     width: 100%;
     z-index: 102;
+
+ h6{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-weight: 600;
+ }
 }
 
 .item {
@@ -154,4 +159,11 @@ p {
     input.p-element {
         font-size: 15px;
     }
+}
+
+.form-control {
+    margin-top: 10px;
+    width: 115%;
+    margin-left: 38px;
+    cursor: pointer;
 }

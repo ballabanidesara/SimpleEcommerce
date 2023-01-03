@@ -1,11 +1,13 @@
 <div class="card-top container-fluid">
   <div class="container d-flex">
+    <div>
+      <h6>Filter by Category:</h6>
+      <select class="form-control" (change)="filterProductsCategory($event)">
+        <option value="all" selected> All</option>
+        <option value="{{option}}" *ngFor="let option of categories">{{option}}</option>
 
-    <select class="form-control" (change)="filterrCategory($event)">
-      <option value="all" selected> All</option>
-      <option value="{{option}}" *ngFor="let option of categories">{{option}}</option>
-
-    </select>
+      </select>
+    </div>
 
     <!-- <div class="item">
       <a (click)="filterrCategory($event)">
