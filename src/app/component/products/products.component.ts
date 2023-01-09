@@ -23,13 +23,9 @@ export class ProductsComponent {
   sortOrder: number;
   sortField: string;
 
-
-
-
   selectedCategoryId = '';
-  posts$ = this.productService.allPosts$;
+  posts$ = this.productService.posts$;
   categories$ = this.categoryService.categories$
-
   selectedCategorySubject = new BehaviorSubject<string>('');
   selectedCategoryAction$ = this.selectedCategorySubject.asObservable();
 
@@ -37,15 +33,13 @@ export class ProductsComponent {
   filteredPosts$ = combineLatest([
     this.posts$,
     this.selectedCategoryAction$,
-    
   ]).pipe(
-
     map(([posts, selectedCategory]) => {
       return posts.filter((post) =>
         selectedCategory ? post.category === selectedCategory : true
       );
     })
-    
+
   );
 
 

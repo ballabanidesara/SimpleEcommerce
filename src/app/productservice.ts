@@ -15,8 +15,6 @@ export class ProductService {
     private categoryService: CategoryService,) { }
 
 
-
-
   posts$ = this.http
     .get<{ [id: string]: Product }>(
       `https://fakestoreapi.com/products`
@@ -32,28 +30,24 @@ export class ProductService {
 
     );
 
-  postsWithCategory$ = combineLatest([
-    this.posts$,
-    this.categoryService.categories$,
-  ]).pipe(
-    map(([posts, categories]) => {
-      return posts.map((post) => {
-        return {
-          ...post
-        } as Product;
-      });
-    }),
+  // postsWithCategory$ = combineLatest([
+  //   this.posts$,
+  //   this.categoryService.categories$,
+  // ]).pipe(
+  //   map(([posts]) => {
+  //     return posts.map((post) => {
+  //       return {
+  //         ...post
+  //       } as Product;
+  //     });
+  //   }),
 
-  );
+  // );
 
-  allPosts$ = merge(
-    this.postsWithCategory$,
+  // allPosts$ = merge(
+  //   this.postsWithCategory$,
 
-  )
-
-
-
-
+  // )
 
 
   getAllProducts() {
