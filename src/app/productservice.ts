@@ -1,14 +1,59 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { combineLatest, map, pipe, merge } from 'rxjs';
+import { CategoryService } from './app/category.service';
 
+import { zip } from 'rxjs';
 import { Product } from './product';
 
 @Injectable()
 export class ProductService {
 
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private categoryService: CategoryService,) { }
+
+
+
+
+  posts$ = this.http
+    .get<{ [id: string]: Product }>(
+      `https://fakestoreapi.com/products`
+    )
+    .pipe(
+      map((posts) => {
+        let postsData: Product[] = [];
+        for (let id in posts) {
+          postsData.push({ ...posts[id], id });
+        }
+        return postsData;
+      }),
+
+    );
+
+  postsWithCategory$ = combineLatest([
+    this.posts$,
+    this.categoryService.categories$,
+  ]).pipe(
+    map(([posts, categories]) => {
+      return posts.map((post) => {
+        return {
+          ...post
+        } as Product;
+      });
+    }),
+
+  );
+
+  allPosts$ = merge(
+    this.postsWithCategory$,
+
+  )
+
+
+
+
 
 
   getAllProducts() {
@@ -19,11 +64,11 @@ export class ProductService {
     );
   }
 
-  getAllCategories(){
+  getAllCategories() {
     return this.http.get('https://fakestoreapi.com/products/categories')
   }
 
-  getProductsByCategory(keyword: string){
+  getProductsByCategory(keyword: string) {
     return this.http.get('https://fakestoreapi.com/products/category/' + keyword)
   }
 

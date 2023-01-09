@@ -3,8 +3,9 @@ import { ProductService } from 'src/app/productservice';
 import { Product } from 'src/app/product';
 import { SelectItem } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, combineLatest, map, Observable } from 'rxjs';
 import { CartService } from 'src/app/service/cart.service';
+import { CategoryService } from 'src/app/app/category.service';
 
 
 @Component({
@@ -22,9 +23,36 @@ export class ProductsComponent {
   sortOrder: number;
   sortField: string;
 
+
+
+
+  selectedCategoryId = '';
+  posts$ = this.productService.allPosts$;
+  categories$ = this.categoryService.categories$
+
+  selectedCategorySubject = new BehaviorSubject<string>('');
+  selectedCategoryAction$ = this.selectedCategorySubject.asObservable();
+
+
+  filteredPosts$ = combineLatest([
+    this.posts$,
+    this.selectedCategoryAction$,
+    
+  ]).pipe(
+
+    map(([posts, selectedCategory]) => {
+      return posts.filter((post) =>
+        selectedCategory ? post.category === selectedCategory : true
+      );
+    })
+    
+  );
+
+
   constructor(
     private productService: ProductService,
     private cartService: CartService,
+    private categoryService: CategoryService,
     private primengConfig: PrimeNGConfig
   ) { }
 
@@ -103,7 +131,14 @@ export class ProductsComponent {
 
   addtocart(item: any) {
     this.cartService.addtoCart(item);
+
   }
+
+  onCategoryChange(event: Event) {
+    let selectedCategoryId = (event.target as HTMLSelectElement).value;
+    this.selectedCategorySubject.next(selectedCategoryId);
+  }
+
 
   // filter(category: string) {
   //   this.filterCategory = this.products

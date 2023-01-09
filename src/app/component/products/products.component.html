@@ -2,11 +2,11 @@
   <div class="container d-flex">
     <div>
       <h6>Filter by Category:</h6>
-      <select class="form-control" (change)="filterProductsCategory($event)">
-        <option value="all" selected> All</option>
+      <select class="form-control" (change)="onCategoryChange($event)">
+        <option value="">All</option>
         <option value="{{option}}" *ngFor="let option of categories">{{option}}</option>
-
       </select>
+
     </div>
 
     <!-- <div class="item">
@@ -47,7 +47,7 @@
     </ng-template>
 
     <ng-template let-product pTemplate="gridItem">
-      <div class="container">
+      <div class="container" *ngIf="filteredPosts$ | async as products">
 
         <div class="row">
 
