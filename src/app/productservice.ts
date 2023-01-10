@@ -12,7 +12,7 @@ export class ProductService {
 
   constructor(
     private http: HttpClient,
-    private categoryService: CategoryService,) { }
+    private categoryService: CategoryService) { }
 
 
   products$ = this.http
@@ -20,12 +20,12 @@ export class ProductService {
       `https://fakestoreapi.com/products`
     )
     .pipe(
-      map((posts) => {
-        let postsData: Product[] = [];
-        for (let id in posts) {
-          postsData.push({ ...posts[id], id });
+      map((products) => {
+        let productsData: Product[] = [];
+        for (let id in products) {
+          productsData.push({ ...products[id], id });
         }
-        return postsData;
+        return productsData;
       }),
 
     );
