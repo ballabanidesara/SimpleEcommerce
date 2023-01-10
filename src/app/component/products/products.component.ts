@@ -24,19 +24,19 @@ export class ProductsComponent {
   sortField: string;
 
   selectedCategoryId = '';
-  posts$ = this.productService.posts$;
+  products$ = this.productService.products$;
   categories$ = this.categoryService.categories$
   selectedCategorySubject = new BehaviorSubject<string>('');
   selectedCategoryAction$ = this.selectedCategorySubject.asObservable();
 
 
-  filteredPosts$ = combineLatest([
-    this.posts$,
+  filteredProducts$ = combineLatest([
+    this.products$,
     this.selectedCategoryAction$,
   ]).pipe(
-    map(([posts, selectedCategory]) => {
-      return posts.filter((post) =>
-        selectedCategory ? post.category === selectedCategory : true
+    map(([products, selectedCategory]) => {
+      return products.filter((product) =>
+        selectedCategory ? product.category === selectedCategory : true
       );
     })
 
@@ -88,27 +88,27 @@ export class ProductsComponent {
     })
   }
 
-  filterProductsCategory(event: any) {
-    let value = event.target.value;
-    if (value == "all") {
-      this.getProducts()
-    }
-    else {
-      this.getProductsCategory(value)
-    }
+  // filterProductsCategory(event: any) {
+  //   let value = event.target.value;
+  //   if (value == "all") {
+  //     this.getProducts()
+  //   }
+  //   else {
+  //     this.getProductsCategory(value)
+  //   }
 
-  }
+  // }
 
-  getProductsCategory(keyword: string) {
-    this.productService.getProductsByCategory(keyword).subscribe((res: any) => {
-      this.products = res;
-      this.products.forEach((a: any) => {
-        Object.assign(a, { quantity: 1, total: a.price });
-      });
+  // getProductsCategory(keyword: string) {
+  //   this.productService.getProductsByCategory(keyword).subscribe((res: any) => {
+  //     this.products = res;
+  //     this.products.forEach((a: any) => {
+  //       Object.assign(a, { quantity: 1, total: a.price });
+  //     });
 
-    })
+  //   })
 
-  }
+  // }
 
 
   onSortChange(event) {
@@ -133,13 +133,4 @@ export class ProductsComponent {
     this.selectedCategorySubject.next(selectedCategoryId);
   }
 
-
-  // filter(category: string) {
-  //   this.filterCategory = this.products
-  //     .filter((a: any) => {
-  //       if (a.category == category || category == '') {
-  //         return a;
-  //       }
-  //     })
-  // }
 }

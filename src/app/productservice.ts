@@ -15,7 +15,7 @@ export class ProductService {
     private categoryService: CategoryService,) { }
 
 
-  posts$ = this.http
+  products$ = this.http
     .get<{ [id: string]: Product }>(
       `https://fakestoreapi.com/products`
     )

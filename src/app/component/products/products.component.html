@@ -33,7 +33,7 @@
 </div>
 
 
-<div class="container">
+<div class="container" *ngIf="filteredProducts$ | async as products">
   <p-dataView #dv [value]="products" [paginator]="true" [rows]="1" [sortField]="sortField" [sortOrder]="sortOrder"
     layout="grid">
     <ng-template pTemplate="header">
@@ -47,7 +47,7 @@
     </ng-template>
 
     <ng-template let-product pTemplate="gridItem">
-      <div class="container" *ngIf="filteredPosts$ | async as products">
+      <div class="container">
 
         <div class="row">
 
