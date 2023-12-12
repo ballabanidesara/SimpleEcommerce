@@ -10,22 +10,24 @@
                     Amazon
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control pi pi-search" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products...">
+                    <input type="text" class="form-control pi pi-search" [(ngModel)]="searchTerm"
+                        (keyup)="search($event)" placeholder="search products...">
                 </div>
                 <span class="pi pi-search"></span>
 
             </div>
             <div class="right-side-nav">
                 <span class="profile-name p-d-flex">
-                    <div>
+                    <div class="profile-info">
+                        <a routerLink="user-auth">Login/Sign-up</a>
                         <button class="nofocus" routerLink="cart">
                             <i class="pi pi-shopping-cart"></i>
                             <div class="badge bg-danger">{{cartLength}}</div>
                         </button>
                     </div>
                 </span>
-
             </div>
+            
 
         </div>
 

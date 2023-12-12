@@ -21,6 +21,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './component/cart/cart.component';
 import { FilterPipe } from './shared/filter.pipe';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { FilterPipe } from './shared/filter.pipe';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  declarations: [ AppComponent, ProductsComponent, HeaderComponent, CartComponent, FilterPipe ],
+  declarations: [ AppComponent, ProductsComponent, HeaderComponent, CartComponent, FilterPipe, UserAuthComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
