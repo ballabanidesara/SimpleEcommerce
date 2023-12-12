@@ -94,7 +94,7 @@ i.pi.pi-amazon {
 }
 
 a {
-  color: white;
+  padding-left: 40px;
   padding-right: 30px;
   font-weight: bold;
 }
@@ -102,4 +102,9 @@ a {
 .right-side-nav .profile-info {
   display: flex;
   align-items: center;
+}
+
+.pi-user:before {
+  color: white;
+  font-size: 19px;
 }
