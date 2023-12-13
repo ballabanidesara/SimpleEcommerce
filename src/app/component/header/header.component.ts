@@ -31,4 +31,6 @@ export class HeaderComponent implements OnInit {
     this.searchTerm = (event.target as HTMLInputElement).value;
     this.cartService.search.next(this.searchTerm);
   }
+
+  
 }

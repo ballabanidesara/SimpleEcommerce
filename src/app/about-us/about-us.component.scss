@@ -1,0 +1,35 @@
+/* carousel.component.css */
+
+// /* Center the carousel container */
+// .center-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh; /* Adjust the height as needed */
+// }
+
+// /* Adjust the width and margin of the carousel container */
+// .p-carousel-container {
+//   width: 80%; /* Adjust the width as needed */
+//   margin-top: 200px;
+// }
+
+// /* Apply styles directly to all img tags inside the carousel */
+// :host ::ng-deep .custom-carousel .p-carousel-item img.carousel-image {
+//   width: 100% !important; /* Set width to fill the carousel container */
+//   height: auto !important; /* Allow images to scale proportionally */
+//   object-fit: cover; /* Set the object-fit style */
+// }
+
+/* About Us Page CSS */
+
+.background-image {
+    /* Set the background image URL */
+    background-image: url('https://img.freepik.com/premium-photo/cloud-technology-icon-smartphone_117856-2693.jpg');
+    background-size: cover; /* Ensures the background image covers the entire element */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+  }
+
+
+  

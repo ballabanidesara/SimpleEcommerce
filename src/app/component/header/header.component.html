@@ -3,43 +3,32 @@
 
         <div class="my-navbar">
             <div class="left-side-nav">
-                <i class="pi pi-amazon">&nbsp;
-
-                </i>
+                <i class="pi pi-amazon">&nbsp;</i>
                 <div class="title-wrapper">
-                    Amazon
+                    <a routerLink="products">AMAZON</a>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control pi pi-search" [(ngModel)]="searchTerm"
-                        (keyup)="search($event)" placeholder="search products...">
+                        (keyup)="search($event)" placeholder="Search products...">
                 </div>
                 <span class="pi pi-search"></span>
-
             </div>
             <div class="right-side-nav">
-
-
                 <span class="profile-name p-d-flex">
                     <div class="profile-info">
+                        <a routerLink="home">HOME</a>
+                        <a routerLink="about-us">ABOUT US</a>
+                        <a routerLink="contact-us">CONTACT US</a>
                         <button class="nofocus" routerLink="cart">
                             <i class="pi pi-shopping-cart"></i>
                             <div class="badge bg-danger">{{cartLength}}</div>
                         </button>
-
                         <a routerLink="user-auth">
                             <i class="pi pi-user"></i>
                         </a>
-                        <a routerLink="contact-us">
-                          CONTACT US
-                        </a>
-
                     </div>
                 </span>
             </div>
-
-
         </div>
-
-
     </div>
 </section>

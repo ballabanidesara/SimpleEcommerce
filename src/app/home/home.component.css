@@ -1,0 +1,12 @@
+.background-image {
+  /* Set the background image URL */
+  background-image: url("https://img.freepik.com/premium-photo/cloud-technology-icon-smartphone_117856-2693.jpg");
+  background-size: cover; /* Ensures the background image covers the entire element */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height by default */
+
+  /* Adjustments for mobile devices */
+  @media screen and (max-width: 768px) {
+    height: 60vh; /* Adjust height for mobile devices as needed */
+  }
+}
