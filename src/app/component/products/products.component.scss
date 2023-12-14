@@ -1,170 +1,179 @@
 // Product Card Style
 
 .product-category-icon {
-    vertical-align: middle;
-    margin-right: 0.5rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 .product-category {
-    font-weight: 600;
-    vertical-align: middle;
+  font-weight: 600;
+  vertical-align: middle;
 }
-
 
 .card {
-    padding: 30px;
-    margin: 40px;
-
+  padding: 30px;
+  margin: 40px;
 }
 
-// div.row {
-//     margin-top: 18rem;
-// }
-
+div.row {
+  background-color: #042036;
+}
 
 .product-grid-item-content {
-    text-align: center;
+  text-align: center;
 }
 
 .card img {
-    width: 100px;
-    height: 100px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    text-align: center;
-    transition: 0.3s ease-in-out;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
 }
 
 .card img:hover {
-    transition: 0.3s ease-in-out;
-    transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #0c2261;
-    border-color: #0c2261;
+  color: #fff;
+  background-color: #0c2261;
+  border-color: #0c2261;
 
-    &:hover {
-        background-color: #2a2b30 !important;
-    }
+  &:hover {
+    background-color: #2a2b30 !important;
+  }
 }
 
 h5 {
-    margin-top: 25px;
-    font-size: 16px;
-    font-weight: 600;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 600;
 
-    &:hover {
-        color: rgb(84, 83, 85) !important;
-
-    }
+  &:hover {
+    color: rgb(84, 83, 85) !important;
+  }
 }
 
 h6,
 p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100ch;
 }
 
 .instruction {
-    font-size: 14px;
-    border-radius: 4px;
-    width: 56%;
-    padding: 10px;
-    margin-left: 10px;
-    margin-bottom: 15px;
-    background-color: #fdefd6;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 56%;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  background-color: #fdefd6;
 }
 
-
 .d-flex {
-    display: -ms-flexbox !important;
-    display: flex !important;
-
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .card-top.container-fluid {
-    background-color: rgb(240, 236, 236);
-    color: #0c2261;
-    height: 100px;
-    position: fixed;
-    top: 90px;
-    width: 100%;
-    z-index: 102;
+  background-color: #042036;
+  color: #042036;
+  height: 100px;
+  position: fixed;
+  top: 90px;
+  width: 100%;
+  z-index: 102;
 
-    h6 {
-        margin-top: 20px;
-        font-size: 15px;
-        margin-left: 40px;
-        font-weight: 600;
-    }
+  h6 {
+    margin-top: 20px;
+    font-size: 15px;
+    margin-left: 40px;
+    font-weight: 600;
+  }
 }
 
 .item {
-    margin: 0px 15px;
-    text-align: center;
+  margin: 0px 15px;
+  text-align: center;
 }
 
 .pi-chevron-down:before {
-    font-size: 12px;
-    font-weight: 600;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 :host ::ng-deep .p-dataview-header {
-    display: inline-flex;
-    margin-left: 30px;
+  display: inline-flex;
+  margin-left: 18px;
+  background-color: #042036;
+  border: none;
 }
 
 :host ::ng-deep .p-dataview-emptymessage {
-    margin-left: 35px;
+  margin-left: 35px;
 }
 
 :host::ng-deep {
+  .p-paginator-page,
+  .p-paginator-next,
+  .p-paginator-last,
+  .p-paginator-first,
+  .p-paginator-prev {
+    border: none;
+    margin: 10px;
+    color: grey;
+    margin-bottom: 40px;
+  }
+}
 
-    .p-paginator-page,
-    .p-paginator-next,
-    .p-paginator-last,
-    .p-paginator-first,
-    .p-paginator-prev {
-        border: none;
-        margin: 10px;
-        color: grey;
-        margin-bottom: 40px;
-    }
+:host::ng-deep {
+  .p-paginator-bottom {
+    background-color: #042036;
+    border: none;
+  }
 }
 
 :host ::ng-deep .p-dropdown {
-    width: 14.5rem;
-    border-width: 1px 0 1px 0;
-    padding: 1rem;
-    font-weight: 600;
-    margin-top: 13rem;
-    margin-right: 9rem;
+  background-color: #042036;
+  width: 14.5rem;
+  border-width: 1px 0 1px 0;
+  padding: 1rem;
+  font-weight: 600;
+  margin-top: 13rem;
+  margin-right: 9rem;
 
-    .p-dropdown-trigger {
-        border: 1px solid grey;
-        background-color: rgb(170, 168, 168) !important;
-    }
+  .p-dropdown-trigger {
+    border: 1px solid grey;
+    background-color: rgb(170, 168, 168) !important;
+  }
 
-    .p-dropdown-item {
-        cursor: pointer;
-        text-align: right;
-        font-size: 14px;
-        margin-left: 15px;
+  .p-dropdown-item {
+    cursor: pointer;
+    text-align: right;
+    font-size: 14px;
+    margin-left: 15px;
+  }
 
-    }
-
-    input.p-element {
-        font-size: 15px;
-    }
+  input.p-element {
+    font-size: 15px;
+  }
 }
 
 .form-control {
-    margin-top: 10px;
-    width: 115%;
-    margin-left: 38px;
-    cursor: pointer;
+  margin-top: 10px;
+  width: 115%;
+  margin-left: 38px;
+  cursor: pointer;
+}
+
+.user-auth {
+  /* Set the background image URL */
+  background-color: #042036;
+  background-size: cover; /* Ensures the background image covers the entire element */
+  width: 100%; /* Full width */
 }
