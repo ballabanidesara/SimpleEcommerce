@@ -12,6 +12,7 @@
 }
 
 .common-form {
+  background-image: url("https://www.svgbackgrounds.com/wp-content/uploads/2021/07/hurricane-aperature-3d-background.jpg");
   width: 500px;
   padding: 50px;
   border: 1px solid #ccc;
@@ -30,14 +31,15 @@
 }
 
 .form-button {
-  width: 100%;
+  width: 95%;
   margin-top: 15px;
   padding: 10px;
   border: none;
   border-radius: 3px;
-  background-color: #042036;
-  color: #fff;
+  background-color: #def0f0;
+  color: #042036;
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* .form-button:hover {
@@ -75,4 +77,5 @@ h3 {
 
 p {
   margin-top: 20px;
+  color: white;
 }

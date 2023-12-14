@@ -1,8 +1,12 @@
 .card {
+  background-image: url("https://img.freepik.com/free-photo/arrangement-black-friday-shopping-carts-with-copy-space_23-2148667047.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1702512000&semt=ais");
+  background-size: cover; /* Ensure the background image covers the entire card */
+  background-position: center;
   height: 60vh;
   margin: 25px;
   padding: 25px;
   margin-top: 120px;
+ 
 }
 
 .center img {
@@ -15,9 +19,18 @@
   margin: 20px 0px;
 }
 
-h4,
+h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
 h5 {
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 8px;
 }
 
 h6 {
@@ -51,6 +64,9 @@ h6 {
   font-weight: 400;
   padding: 12px 72px;
   border-radius: 3px !important;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .container {
@@ -58,6 +74,6 @@ h6 {
   /* Other styles for the container */
 }
 
-.html{
-    background-color: #042036;
+.html {
+  background-color: #042036;
 }

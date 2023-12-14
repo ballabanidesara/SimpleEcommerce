@@ -2,25 +2,66 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  min-height: 100vh;
+  background-color: #042036;
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
 
 .contact-us {
-  width: 1200px; /* Adjust the width as needed */
+  width: 100%;
+  max-width: 1200px;
   padding: 50px;
-  padding-top: 30px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #042036;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.user-auth {
-  /* Set the background image URL */
-  background-color:  #042036;
-  background-size: cover; /* Ensures the background image covers the entire element */
-  width: 100%; /* Full width */
-  height: 100vh; /* Full height by default */
+.contact-us h3 {
+  color: white;
+  font-weight: bold;
 }
 
-/* Rest of the styles remain the same */
+.contact-us p {
+  line-height: 1.6;
+  color: white;
+}
+
+.map-container {
+  margin-bottom: 20px;
+}
+
+iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+}
+
+.contact-details {
+  border-left: 1px solid #ccc;
+  padding-left: 30px;
+  color: white;
+  background-color: #042036;
+}
+
+.contact-details h4 {
+  color: white;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.contact-details address {
+  font-style: normal;
+}
+
+.contact-details p {
+  margin-bottom: 5px;
+}
+
+/* Adjust the responsive styles for different screen sizes if needed */
+@media screen and (max-width: 768px) {
+  .contact-us {
+    padding: 30px;
+  }
+}
