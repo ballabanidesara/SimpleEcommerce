@@ -1,5 +1,9 @@
 // Product Card Style
 
+:host ::ng-deep .p-dropdown .p-dropdown-label.p-placeholder {
+  color: white;
+}
+
 .product-category-icon {
   vertical-align: middle;
   margin-right: 0.5rem;
@@ -16,7 +20,7 @@
 }
 
 div.row {
-  background-color: #042036;
+  background-color: #04020d;
 }
 
 .product-grid-item-content {
@@ -39,8 +43,8 @@ div.row {
 
 .btn-primary {
   color: #fff;
-  background-color: #0c2261;
-  border-color: #0c2261;
+  background-color: #04020d;
+  border-color: #04020d;
 
   &:hover {
     background-color: #2a2b30 !important;
@@ -81,8 +85,8 @@ p {
 }
 
 .card-top.container-fluid {
-  background-color: #042036;
-  color: #042036;
+  background-color: #04020d;
+  color: #04020d;
   height: 100px;
   position: fixed;
   top: 90px;
@@ -110,7 +114,7 @@ p {
 :host ::ng-deep .p-dataview-header {
   display: inline-flex;
   margin-left: 18px;
-  background-color: #042036;
+  background-color: #04020d;
   border: none;
 }
 
@@ -133,13 +137,13 @@ p {
 
 :host::ng-deep {
   .p-paginator-bottom {
-    background-color: #042036;
+    background-color: #04020d;
     border: none;
   }
 }
 
 :host ::ng-deep .p-dropdown {
-  background-color: #042036;
+  background-color: #04020d;
   width: 14.5rem;
   border-width: 1px 0 1px 0;
   padding: 1rem;
@@ -149,7 +153,6 @@ p {
 
   .p-dropdown-trigger {
     border: 1px solid grey;
-    background-color: rgb(170, 168, 168) !important;
   }
 
   .p-dropdown-item {
@@ -171,9 +174,11 @@ p {
   cursor: pointer;
 }
 
+
+
 .user-auth {
   /* Set the background image URL */
-  background-color: #042036;
+  background-color: #04020d;
   background-size: cover; /* Ensures the background image covers the entire element */
   width: 100%; /* Full width */
 }

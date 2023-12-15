@@ -1,35 +1,128 @@
-/* carousel.component.css */
+/* Flexbox styles for centering */
+:host ::ng-deep .p-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 70%;
+  margin: 0 auto;
+}
 
-// /* Center the carousel container */
-// .center-container {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh; /* Adjust the height as needed */
-// }
+:host ::ng-deep .custom-carousel .p-carousel-item img.carousel-image {
+  width: 70%;
+  height: 300px;
+}
 
-// /* Adjust the width and margin of the carousel container */
-// .p-carousel-container {
-//   width: 80%; /* Adjust the width as needed */
-//   margin-top: 200px;
-// }
+:host
+  ::ng-deep
+  .p-carousel
+  .p-carousel-indicators
+  .p-carousel-indicator.p-highlight
+  button {
+  background-color: #9a2207;
+}
 
-// /* Apply styles directly to all img tags inside the carousel */
-// :host ::ng-deep .custom-carousel .p-carousel-item img.carousel-image {
-//   width: 100% !important; /* Set width to fill the carousel container */
-//   height: auto !important; /* Allow images to scale proportionally */
-//   object-fit: cover; /* Set the object-fit style */
-// }
+.about-us {
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
 
-/* About Us Page CSS */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.background-image {
-    /* Set the background image URL */
-    background-image: url('https://img.freepik.com/premium-photo/cloud-technology-icon-smartphone_117856-2693.jpg');
-    background-size: cover; /* Ensures the background image covers the entire element */
-    width: 100vw; /* Full width */
-    height: 100vh; /* Full height */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(226, 228, 208);
+  padding: 10px;
+  max-width: 500px;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+  .overlay-text {
+    top: 35%;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .overlay-text {
+    top: 40%;
+    font-size: 0.8em;
+  }
+}
+
+.carousel-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.boxes-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.icon i {
+  font-size: 18px;
+}
+
+.box {
+  background-image: url("https://img.freepik.com/premium-vector/white-background-with-red-diagonal-lines_545823-19.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px;
+  color: black;
+  flex: 1 1 300px;
+  max-width: 400px;
+  height: 150px;
+}
+
+.box p {
+  font-size: 1em;
+  line-height: 1.6em;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .boxes-container {
+    max-width: 90%;
   }
 
-
-  
+  .box {
+    flex: 1 1 200px;
+  }
+}

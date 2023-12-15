@@ -5,14 +5,13 @@
   padding-top: 200px;
   /* align-items: center; */
   height: 80vh;
-  background-color: #042036;
   background-size: cover;
   width: 100%;
   height: 100vh;
 }
 
 .common-form {
-  background-image: url("https://www.svgbackgrounds.com/wp-content/uploads/2021/07/hurricane-aperature-3d-background.jpg");
+  background-image: url("https://t3.ftcdn.net/jpg/05/86/22/54/240_F_586225463_N85DCX8UpwjYDonAuS0yMSgc2YULK3QD.jpg");
   width: 500px;
   padding: 50px;
   border: 1px solid #ccc;
@@ -37,7 +36,7 @@
   border: none;
   border-radius: 3px;
   background-color: #def0f0;
-  color: #042036;
+  color: #04020d;
   cursor: pointer;
   font-weight: bold;
 }
