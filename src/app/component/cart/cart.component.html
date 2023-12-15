@@ -25,7 +25,8 @@
                             </td>
                             <td><img style="width: 100px; height:100px; margin-top: 20px;" src="{{item.image}}" alt="">
                             </td>
-                            <td style="width: 35%;">{{item.description}}</td>
+                            <td style="width: 35%;">{{ item.description.split(' ').slice(0, 15).join(' ') }}...</td>
+
                             <th style="width: 18%;">
                                 <h6>{{item.price}}</h6>
                             </th>

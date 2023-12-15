@@ -10,6 +10,8 @@
 
 .contact-us {
   width: 100%;
+  font-style: italic;
+  text-align: center;
   max-width: 1200px;
   padding: 50px;
   border: 1px solid #ccc;
@@ -45,7 +47,7 @@ iframe {
   background-color: #04020d;
 }
 
-.contact-details h4 {
+.contact-details h5 {
   color: white;
   margin-top: 0;
   font-weight: bold;
