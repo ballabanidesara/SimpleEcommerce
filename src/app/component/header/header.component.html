@@ -13,9 +13,9 @@
                 </div>
                 <span class="pi pi-search"></span>
             </div>
-            <div class="right-side-nav">
+            <div class="right-side-nav" [ngSwitch]="menuType">
                 <span class="profile-name p-d-flex">
-                    <div class="profile-info">
+                    <div class="profile-info" *ngSwitchCase="'default'">
                         <a routerLink="home">HOME</a>
                         <a routerLink="about-us">ABOUT US</a>
                         <a routerLink="contact-us">CONTACT US</a>
@@ -27,6 +27,20 @@
                             <i class="pi pi-user"></i>
                         </a>
                     </div>
+
+                    <div class="user-info" *ngSwitchCase="'user'">
+                        <a routerLink="home">HOME</a>
+                        <a routerLink="about-us">ABOUT US</a>
+                        <a routerLink="contact-us">CONTACT US</a>
+                        <a>{{userName | uppercase}}</a>
+                        <a (click)="userLogout()">LOGOUT</a>
+                        <button class="nofocus" routerLink="cart">
+                            <i class="pi pi-shopping-cart"></i>
+                            <div class="badge bg-danger">{{cartLength}}</div>
+                        </button>
+                       
+                    </div>
+
                 </span>
             </div>
         </div>

@@ -93,7 +93,18 @@ i.pi.pi-amazon {
 }
 
 a {
+  color: white;
+}
+
+.profile-info a {
   padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.user-info a {
   padding-right: 15px;
   font-weight: bold;
   color: white;
@@ -104,6 +115,12 @@ a {
   display: flex;
   align-items: center;
   font-size: 20px;
+}
+
+.right-side-nav .user-info {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
 }
 
 .pi-shopping-cart:before {

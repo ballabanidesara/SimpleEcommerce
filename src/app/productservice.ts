@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { combineLatest, map, pipe, merge } from 'rxjs';
 import { CategoryService } from './app/category.service';
 
@@ -8,8 +8,7 @@ import { Product } from './product';
 
 @Injectable()
 export class ProductService {
-
-
+  cartData = new EventEmitter<Product[] | []>();
   constructor(
     private http: HttpClient,
     private categoryService: CategoryService) { }
