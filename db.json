@@ -1,5 +1,22 @@
 {
   "users": [
-   
+    {
+      "name": "desara",
+      "email": "desara@basecom.com",
+      "password": "Desara123",
+      "id": 1
+    },
+    {
+      "name": "Ersi",
+      "email": "ersi@gmail.com",
+      "password": "Ersi123",
+      "id": 2
+    },
+    {
+      "name": "Jane",
+      "email": "jane@gmail.com",
+      "password": "Jane123",
+      "id": 3
+    }
   ]
 }
