@@ -10,7 +10,7 @@ import { signUp, login } from '../data-type';
 })
 export class UserService {
   invaliduserAuth = new EventEmitter<boolean>(false);
-  private baseUrl = 'https://verdant-fox-a64f52.netlify.app/';
+  private baseUrl = 'https://inspiring-madeleine-7e19dd.netlify.app';
 
   constructor(
     private http: HttpClient,
