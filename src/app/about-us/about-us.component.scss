@@ -19,7 +19,7 @@
   .p-carousel-indicators
   .p-carousel-indicator.p-highlight
   button {
-  background-color: #9a2207;
+  background-color: #52515c;
 }
 
 .about-us {
@@ -93,14 +93,14 @@
 }
 
 .box {
-  background-image: url("https://img.freepik.com/premium-vector/white-background-with-red-diagonal-lines_545823-19.jpg");
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/169/428/small/modern-dark-blue-background-with-golden-lines-element-vector.jpg");
   background-size: cover;
   display: flex;
   align-items: center;
   padding: 20px;
   border-radius: 8px;
   margin: 10px;
-  color: black;
+  color: white;
   flex: 1 1 300px;
   max-width: 400px;
   height: 150px;
@@ -109,7 +109,7 @@
 .box p {
   font-size: 1em;
   line-height: 1.6em;
-  color: black;
+  color: white;
   font-style: italic;
   font-weight: bold;
   text-align: center;
@@ -125,4 +125,10 @@
   .box {
     flex: 1 1 200px;
   }
+
+  .box:hover .hover-image {
+    display: block;
+  }
+
+
 }
