@@ -24,7 +24,8 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   imports: [
@@ -42,7 +43,17 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    CarouselModule
+    CarouselModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyCkMo7ti4_YfMoBoU7trwPbUtvenyeFjr8",
+      authDomain: "simple-e-commerce-3fbe8.firebaseapp.com",
+      projectId: "simple-e-commerce-3fbe8",
+      storageBucket: "simple-e-commerce-3fbe8.appspot.com",
+      messagingSenderId: "549145985742",
+      appId: "1:549145985742:web:f7d2a1ccb731ae1ad6469f",
+      measurementId: "G-WDJE7HXEBJ"
+    }),
+    AngularFireAuthModule
   ],
   declarations: [AppComponent, ProductsComponent, HeaderComponent, CartComponent, FilterPipe, UserAuthComponent, ContactUsComponent, AboutUsComponent, HomeComponent],
   bootstrap: [AppComponent],
