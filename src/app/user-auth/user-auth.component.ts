@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { signUp, login } from '../data-type';
-import { UserService } from '../user.service';
-import { ProductService } from '../productservice';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthenticationService } from '../service/authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-auth',
@@ -9,37 +9,70 @@ import { ProductService } from '../productservice';
   styleUrls: ['./user-auth.component.css']
 })
 export class UserAuthComponent implements OnInit {
-  constructor(private user: UserService, private product: ProductService) { }
+  form!: FormGroup;
+  isLoggingIn = false;
+  isRecoveringPassword = false;
+  authError: string = '';
   showLogin: boolean = true;
-  authError: string = "";
 
+  constructor(
+    private formBuilder: FormBuilder,
+    private authenticationService: AuthenticationService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
-
+    this.initializeForm();
   }
 
-  signUp(data: signUp) {
-    console.warn(data)
-    this.user.userSignUp(data)
+  initializeForm() {
+    this.form = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    });
   }
 
-  login(data: login) {
-    this.user.userLogin(data)
-    this.user.invaliduserAuth.subscribe((result) => {
-      console.warn("apple", result)
-      if (result) {
-        this.authError = "User not found"
-      }
+  signUp() {
+    if (this.form.valid) {
+      this.authenticationService.signUp(
+        this.form.value.email,
+        this.form.value.password
+      ).subscribe({
+        next: () => {
+          this.router.navigate(['home']);
+        },
+        error: (error: any) => {
+          this.authError = error.message;
+        }
+      });
+    }
+  }
 
-    })
+  login() {
+    if (this.form.valid) {
+      this.isLoggingIn = true;
+      this.authenticationService.signIn(
+        this.form.value.email,
+        this.form.value.password,
+      ).subscribe({
+        next: () => {
+          this.router.navigate(['home']);
+        },
+        error: (error: any) => {
+          this.isLoggingIn = false;
+          this.authError = error.message;
+        }
+      });
+    }
   }
 
   openSignUp() {
     this.showLogin = false;
+    this.initializeForm();
   }
 
   openLogin() {
     this.showLogin = true;
+    this.initializeForm();
   }
-
 }

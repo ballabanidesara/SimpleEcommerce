@@ -1,8 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Product } from 'src/app/product';
 import { ProductService } from 'src/app/productservice';
+import { AuthenticationService } from 'src/app/service/authentication.service';
 import { CartService } from 'src/app/service/cart.service';
+import { Router, NavigationEnd } from '@angular/router';
+
+enum MenuType {
+  Default = 'default',
+  User = 'user',
+}
 
 @Component({
   selector: 'app-header',
@@ -11,35 +17,45 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class HeaderComponent implements OnInit {
   public searchTerm !: string;
-  menuType: string = 'default';
   userName: string = "";
   searchResult: undefined | Product[];
   cartItems = 0;
-  constructor(private route: Router, private product: ProductService, private cartService: CartService) { }
+  menuType: MenuType = MenuType.Default;
+  constructor(private authService: AuthenticationService, private route: Router, private product: ProductService, private cartService: CartService) { }
 
 
-
-  ngOnInit(): void {
-    this.route.events.subscribe((val: any) => {
-
-      if (localStorage.getItem('user')) {
-        let userStore = localStorage.getItem('user');
-        let userData = userStore && JSON.parse(userStore);
-        this.userName = userData.name;
-        this.menuType = 'user';
-
-      }
-      else {
-        this.menuType = 'default';
-      }
-    })
+  private extractUsername(email: string | null): string {
+    if (email) {
+      const atIndex = email.indexOf('@'); // Get the index of '@' in the email
+      return atIndex !== -1 ? email.substring(0, atIndex) : '';
+    }
+    return '';
   }
 
 
-  userLogout() {
-    localStorage.removeItem('user');
-    this.route.navigate(['/user-auth'])
-    this.product.cartData.emit([])
+  ngOnInit(): void {
+    this.route.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.authService.auth.user.subscribe((user) => {
+          if (user) {
+            this.userName = this.extractUsername(user.email);
+            this.menuType = MenuType.User;
+          } else {
+            this.menuType = MenuType.Default;
+            this.userName = '';
+          }
+        });
+      }
+    });
+  }
+
+
+  userLogout(): void {
+    this.authService.auth.signOut().then(() => {
+      this.route.navigate(['/user-auth']);
+    }).catch((error) => {
+      console.error('Error signing out:', error);
+    });
   }
 
 
