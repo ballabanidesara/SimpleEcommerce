@@ -60,11 +60,16 @@ export class UserAuthComponent implements OnInit {
         },
         error: (error: any) => {
           this.isLoggingIn = false;
-          this.authError = error.message;
+          if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
+            this.authError = 'Invalid email or password. Please check your credentials.';
+          } else {
+            this.authError = error.message;
+          }
         }
       });
     }
   }
+
 
   openSignUp() {
     this.showLogin = false;

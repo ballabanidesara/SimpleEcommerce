@@ -33,12 +33,12 @@
                         <a routerLink="about-us">ABOUT US</a>
                         <a routerLink="contact-us">CONTACT US</a>
                         <a>{{userName | uppercase}}</a>
-                        <a (click)="userLogout()">LOGOUT</a>
+                        <a (click)="userLogout()" style="cursor: pointer;">LOGOUT</a>
                         <button class="nofocus" routerLink="cart">
                             <i class="pi pi-shopping-cart"></i>
                             <div class="badge bg-danger">{{cartLength}}</div>
                         </button>
-                       
+
                     </div>
 
                 </span>

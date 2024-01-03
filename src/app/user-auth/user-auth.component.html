@@ -23,21 +23,65 @@
 <div class="user-auth">
     <div *ngIf="!showLogin" class="sign-up">
         <h3>User SignUp</h3>
-        <form [formGroup]="form" class="common-form" (ngSubmit)="signUp()">
+        <form [formGroup]="form" class="common-form" (ngSubmit)="signUp()" autocomplete="off">
             <input type="text" class="form-input" formControlName="email" placeholder="Enter User Name">
-            <input type="text" class="form-input" formControlName="email" placeholder="Enter User Email">
-            <input type="password" class="form-input" formControlName="password" placeholder="Enter User Password">
+            <input type="text" class="form-input" formControlName="email" placeholder="Enter User Email"
+                autocomplete="new-email">
+            <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)">
+                <p class="error-message" *ngIf="form.get('email')?.errors?.required">
+                    Email is required!
+                </p>
+                <p class="error-message" *ngIf="form.get('email')?.errors?.email">
+                    Please enter a valid email address!
+                </p>
+            </div>
+            <input type="password" class="form-input" formControlName="password" placeholder="Enter User Password"
+                autocomplete="new-password">
+            <div
+                *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)">
+                <p class="error-message" *ngIf="form.get('password')?.errors?.required">
+                    Password is required!
+                </p>
+                <p class="error-message" *ngIf="form.get('password')?.errors?.minlength">
+                    Password should be at least 6 characters long!
+                </p>
+            </div>
+            <div *ngIf="authError" class="error-message">
+                {{ authError }}
+            </div>
             <button type="submit" class="form-button">Sign Up</button>
-            <p>Already Have an Account? <a (click)="openLogin()">Click Here!</a></p>
+            <p>Already Have an Account? <a (click)="openLogin()" style="cursor: pointer;">Click Here!</a></p>
         </form>
+
     </div>
     <div *ngIf="showLogin" class="login">
         <h3>User Login</h3>
         <form [formGroup]="form" class="common-form" (ngSubmit)="login()">
             <input type="text" class="form-input" formControlName="email" placeholder="Enter User Email">
+            <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)">
+                <p class="error-message" *ngIf="form.get('email')?.errors?.required">
+                    Email is required!
+                </p>
+                <p class="error-message" *ngIf="form.get('email')?.errors?.email">
+                    Please enter a valid email address!
+                </p>
+            </div>
             <input type="password" class="form-input" formControlName="password" placeholder="Enter User Password">
+            <div
+                *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)">
+                <p class="error-message" *ngIf="form.get('password')?.errors?.required">
+                    Password is required!
+                </p>
+                <p class="error-message" *ngIf="form.get('password')?.errors?.minlength">
+                    Password should be at least 6 characters long!
+                </p>
+            </div>
+            <div *ngIf="authError" class="error-message">
+                {{ authError }}
+            </div>
             <button type="submit" class="form-button">Login</button>
-            <p>Want to Create an Account? <a (click)="openSignUp()">Click Here!</a></p>
+            <p>Want to Create an Account? <a (click)="openSignUp()" style="cursor: pointer;">Click Here!</a></p>
         </form>
+
     </div>
 </div>

@@ -11,7 +11,7 @@
 }
 
 .common-form {
-  background-image: url("https://t3.ftcdn.net/jpg/05/86/22/54/240_F_586225463_N85DCX8UpwjYDonAuS0yMSgc2YULK3QD.jpg");
+  background-image: url("https://media.gettyimages.com/id/1151667348/video/4k-free-background-stock-video-seamless-loop.jpg?s=640x640&k=20&c=0tCKE_Xa6vD7-nTFwKK_c4ahNrKoyj0aifC19qwUarg=");
   width: 500px;
   padding: 50px;
   border: 1px solid #ccc;
@@ -56,9 +56,10 @@
   margin-bottom: 20px;
 }
 
-.error-p {
+.error-message {
   color: red;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .invalid-input {
