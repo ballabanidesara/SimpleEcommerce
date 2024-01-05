@@ -1,7 +1,6 @@
 // Product Card Style
-
 :host ::ng-deep .p-dropdown .p-dropdown-label.p-placeholder {
-  color: white;
+  color: #04020d;
 }
 
 .product-category-icon {
@@ -17,10 +16,11 @@
 .card {
   padding: 30px;
   margin: 40px;
+  border: 1px solid #04020d;
 }
 
 div.row {
-  background-color: #04020d;
+  background-color: rgb(229, 229, 231);
 }
 
 .product-grid-item-content {
@@ -42,12 +42,21 @@ div.row {
 }
 
 .btn-primary {
-  color: #fff;
+  color: white;
   background-color: #04020d;
   border-color: #04020d;
+  font-weight: bold;
+
+  &:focus,
+  &:active,
+  &:focus:not(:focus-visible) {
+    outline: none;
+    border-color: transparent !important; /* Reset border color to transparent */
+    box-shadow: none; /* Remove any box shadow added by default */
+  }
 
   &:hover {
-    background-color: #2a2b30 !important;
+    background-color: #3d3d3d !important;
   }
 }
 
@@ -67,6 +76,9 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100ch;
+  color: #04020d;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .instruction {
@@ -82,12 +94,13 @@ p {
 .d-flex {
   display: -ms-flexbox !important;
   display: flex !important;
+  padding-top: 30px;
 }
 
 .card-top.container-fluid {
-  background-color: #04020d;
-  color: #04020d;
-  height: 100px;
+  background-color: rgb(229, 229, 231);
+  color: rgb(229, 229, 231);
+  height: 150px;
   position: fixed;
   top: 90px;
   width: 100%;
@@ -114,7 +127,7 @@ p {
 :host ::ng-deep .p-dataview-header {
   display: inline-flex;
   margin-left: 18px;
-  background-color: #04020d;
+  background-color: rgb(229, 229, 231);
   border: none;
 }
 
@@ -137,48 +150,73 @@ p {
 
 :host::ng-deep {
   .p-paginator-bottom {
-    background-color: #04020d;
+    background-color: rgb(229, 229, 231);
     border: none;
   }
 }
 
 :host ::ng-deep .p-dropdown {
-  background-color: #04020d;
+  background-color: rgb(229, 229, 231);
   width: 14.5rem;
   border-width: 1px 0 1px 0;
-  padding: 1rem;
+  border-color: #04020d;
+  padding: 0.5rem;
   font-weight: 600;
-  margin-top: 13rem;
+  margin-top: 15rem;
   margin-right: 9rem;
 
   .p-dropdown-trigger {
-    border: 1px solid grey;
+    color: #04020d;
   }
 
-  .p-dropdown-item {
+  .p-dropdown-items {
     cursor: pointer;
-    text-align: right;
+    text-align: left;
     font-size: 14px;
-    margin-left: 15px;
+    margin-left: 10px;
+    background-color: rgb(229, 229, 231);
+  }
+
+  .p-dropdown-items-wrapper {
+    overflow: auto;
+    background-color: rgb(229, 229, 231);
+  }
+
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+    padding: 0.5rem 1rem;
   }
 
   input.p-element {
     font-size: 15px;
+  }
+
+  /* Reset the default blue outline and border color on focus or click */
+  &:focus,
+  &:active,
+  &:hover,
+  &:focus:not(:focus-visible) {
+    outline: none;
+    border-color: #04020d; /* Reset border color to your desired color */
+    box-shadow: none; /* Remove any box shadow added by default */
+  }
+
+  /* Prevent default blue color on click for Chrome */
+  &:focus-visible {
+    outline: none;
   }
 }
 
 .form-control {
   margin-top: 10px;
   width: 115%;
-  margin-left: 38px;
+  margin-left: 30px;
   cursor: pointer;
+  color: #04020d;
 }
-
-
 
 .user-auth {
   /* Set the background image URL */
-  background-color: #04020d;
+  background-color: rgb(229, 229, 231);
   background-size: cover; /* Ensures the background image covers the entire element */
   width: 100%; /* Full width */
 }
