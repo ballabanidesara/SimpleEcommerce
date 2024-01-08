@@ -1,0 +1,102 @@
+.card {
+  background-image: url("https://www.shutterstock.com/image-vector/abstract-metallic-blue-black-frame-260nw-457398142.jpg");
+  background-size: cover; /* Ensure the background image covers the entire card */
+  background-position: center;
+  height: 60vh;
+  margin: 25px;
+  padding: 25px;
+  margin-top: 120px;
+  border: 1px solid rgb(230, 235, 203);
+}
+
+.center img {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: none;
+  height: 162px;
+  width: 250px;
+  margin: 20px 0px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 8px;
+}
+
+h6 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card-table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  margin-top: 120px;
+}
+
+.center .btn {
+  font-size: 14px !important;
+  margin-top: 20px !important;
+  font-weight: 400;
+  padding: 12px 72px;
+  border-radius: 3px !important;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.cart-product {
+  background-color: #04020d;
+}
+
+.html {
+  background-color: #04020d;
+}
+
+.table td,
+.table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  color: white;
+  text-align: center;
+}
+
+.cancel-order-button {
+  color: black;
+  width: 130px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cancel-order-button:hover {
+  background-color: #d4c4c4;
+}

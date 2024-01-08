@@ -1,0 +1,61 @@
+<ng-container *ngIf="products.length !=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Order Id</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products; let i = index">
+                            <td style="width: 15%;">
+                                <h6>{{i+1}}</h6>
+                            </td>
+                            <td style="width: 35%;">
+                                <h6>{{item.title}}</h6>
+                            </td>
+                            <th style="width: 18%;">
+                                <h6>{{item.price}}</h6>
+                            </th>
+                            <td style="width: 18%;">
+                                <h6>{{item.quantity}}</h6>
+                            </td>
+                            <td style="width: 12%;">
+                                <h6>{{item.quantity * item.price}} $</h6>
+                            </td>
+                            <td>
+
+                                <button class="cancel-order-button" (click)="removeItem(item)">Cancel Order </button>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</ng-container>
+
+
+
+<ng-container *ngIf="products.length ==0">
+    <div class="container">
+        <div class="card">
+            <!-- <h5 class="card-title"> My Cart</h5> -->
+        </div>
+        <div class="center">
+            <!-- <img src="./assets/images/cart.jpg" alt=""> -->
+            <h4>Your Order List is empty!</h4>
+            <button routerLink="/products" class="btn btn-primary">Order Now</button>
+        </div>
+    </div>
+</ng-container>
