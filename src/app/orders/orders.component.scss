@@ -1,36 +1,17 @@
 .card {
-  background-image: url("https://www.shutterstock.com/image-vector/abstract-metallic-blue-black-frame-260nw-457398142.jpg");
+  background-image: url("https://www.ssi-schaefer.com/resource/blob/1076888/b5bdadcababc0904a574ea9d675870c3/e-commerce-hero-dam-image-en-31561--data.jpg");
   background-size: cover; /* Ensure the background image covers the entire card */
   background-position: center;
   height: 60vh;
-  margin: 25px;
   padding: 25px;
   margin-top: 120px;
   border: 1px solid rgb(230, 235, 203);
 }
 
-.center img {
-  text-decoration: none;
-  color: inherit;
-  border: none;
-  outline: none;
-  height: 162px;
-  width: 250px;
-  margin: 20px 0px;
-}
-
-h4 {
+.order {
+  font-style: italic;
   font-weight: bold;
-  font-size: 1.5rem;
-  color: white;
-  margin-bottom: 10px;
-}
-
-h5 {
-  font-weight: 500;
-  font-size: 1.2rem;
-  color: white;
-  margin-bottom: 8px;
+  color: #04020d;
 }
 
 h6 {
@@ -38,10 +19,10 @@ h6 {
   text-align: center;
 }
 
-.center {
+.left {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 34%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -59,22 +40,7 @@ h6 {
   margin-top: 120px;
 }
 
-.center .btn {
-  font-size: 14px !important;
-  margin-top: 20px !important;
-  font-weight: 400;
-  padding: 12px 72px;
-  border-radius: 3px !important;
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-}
-
 .cart-product {
-  background-color: #04020d;
-}
-
-.html {
   background-color: #04020d;
 }
 
@@ -95,8 +61,9 @@ h6 {
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  border: 1px solid #04020d;
 }
 
 .cancel-order-button:hover {
-  background-color: #d4c4c4;
+  background-color: #d5d5e4;
 }

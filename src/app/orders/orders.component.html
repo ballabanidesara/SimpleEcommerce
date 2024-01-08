@@ -50,12 +50,10 @@
 <ng-container *ngIf="products.length ==0">
     <div class="container">
         <div class="card">
-            <!-- <h5 class="card-title"> My Cart</h5> -->
         </div>
-        <div class="center">
-            <!-- <img src="./assets/images/cart.jpg" alt=""> -->
-            <h4>Your Order List is empty!</h4>
-            <button routerLink="/products" class="btn btn-primary">Order Now</button>
+        <div class="left">
+            <p class="order">YOUR ORDER LIST IS EMPTY!</p>
+            <button routerLink="/products" class="cancel-order-button">Order Now</button>
         </div>
     </div>
 </ng-container>
