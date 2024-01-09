@@ -112,6 +112,10 @@ a {
   text-decoration: none;
 }
 
+.user-info a:hover {
+ color: rgb(212, 212, 212);
+}
+
 .right-side-nav .profile-info {
   display: flex;
   align-items: center;
