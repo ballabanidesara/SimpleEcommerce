@@ -9,7 +9,7 @@
 
 .header {
   background-color: #04020d;
-  padding: 20px 0px 10px 0px;
+  padding: 30px 0px 10px 0px;
   border-top: 4px solid grey;
   position: fixed;
   top: 0px;
@@ -113,7 +113,7 @@ a {
 }
 
 .user-info a:hover {
- color: rgb(212, 212, 212);
+  color: rgb(212, 212, 212);
 }
 
 .right-side-nav .profile-info {
@@ -146,4 +146,53 @@ button.nofocus {
   border: none; /* Remove border */
   padding: 0; /* Remove padding */
   cursor: pointer; /* Set cursor to pointer */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .my-navbar,
+  .left-side-nav,
+  .right-side-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0; /* Adjust padding for smaller screens */
+  }
+
+  .title-wrapper {
+    font-size: 20px; /* Adjust title font size for smaller screens */
+    margin-right: 0; /* Remove right margin for smaller screens */
+  }
+
+  .pi-search:before {
+    display: none;
+  }
+
+  .pi-amazon:before {
+    font-size: 30px; /* Adjust Amazon icon size for smaller screens */
+  }
+
+  .form-control {
+    height: 30px; /* Adjust form control height for smaller screens */
+    margin-left: 5px; /* Adjust form control left margin for smaller screens */
+    margin-top: 5px;
+    padding: 10px; /* Adjust form control padding for smaller screens */
+  }
+
+  .right-side-nav .profile-info {
+    font-size: 16px; /* Adjust profile info font size for smaller screens */
+  }
+
+  .right-side-nav .user-info {
+    font-size: 10px; /* Adjust user info font size for smaller screens */
+  }
+
+  .pi-shopping-cart {
+    font-size: 25px; /* Adjust shopping cart icon size for smaller screens */
+  }
+
+  .pi-user:before {
+    font-size: 20px; /* Adjust user icon size for smaller screens */
+  }
 }

@@ -95,3 +95,20 @@ h6 {
 .cart-button:hover {
   background-color: #d5d5e4;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .center {
+    padding-left: 10%;
+  }
+  .cart {
+    font-size: 15px;
+  }
+  h5 {
+    font-size: 13px;
+  }
+}

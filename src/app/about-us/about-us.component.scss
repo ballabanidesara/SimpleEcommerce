@@ -1,16 +1,16 @@
-/* Flexbox styles for centering */
 :host ::ng-deep .p-carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
-  width: 70%;
+  width: 50%; /* Set initial width to 50% */
   margin: 0 auto;
+  overflow: hidden; /* Hide any overflow content */
 }
 
 :host ::ng-deep .custom-carousel .p-carousel-item img.carousel-image {
-  width: 70%;
-  height: 300px;
+  width: 100%; /* Make the image responsive by setting its width to 100% */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 300px; /* Limit the maximum height of the images */
 }
 
 :host
@@ -22,6 +22,24 @@
   background-color: #52515c;
 }
 
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  :host ::ng-deep .p-carousel-container {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  :host ::ng-deep .custom-carousel .p-carousel-item img.carousel-image {
+    max-height: 200px; /* Adjust maximum image height for smaller screens */
+  }
+
+  /* Adjust overlay text for smaller screens */
+  :host ::ng-deep .custom-carousel .p-carousel-item .overlay-text {
+    font-size: 8px;
+    bottom: 5px;
+  }
+}
+
+
 .about-us {
   justify-content: center;
   align-items: center;
@@ -32,6 +50,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 30px;
 }
 
 .overlay-text {
@@ -130,4 +149,45 @@
   .box:hover .hover-image {
     display: block;
   }
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .box {
+    width: 80%; 
+    margin: 10px;
+  }
+
+  .box p {
+    font-size: 14px;
+  }
+
+  .carousel-item {
+    width: 100%; 
+    text-align: center;
+  }
+
+  .carousel-image {
+    max-width: 100%;
+    height: auto; 
+
+  .overlay-text {
+    font-size: 14px;
+  }
+}
+
 }

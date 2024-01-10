@@ -127,8 +127,10 @@ p {
 :host ::ng-deep .p-dataview-header {
   display: inline-flex;
   margin-left: 18px;
+  margin-top: 20px;
   background-color: rgb(229, 229, 231);
   border: none;
+
 }
 
 :host ::ng-deep .p-dataview-emptymessage {
@@ -196,8 +198,8 @@ p {
   &:hover,
   &:focus:not(:focus-visible) {
     outline: none;
-    border-color: #04020d; /* Reset border color to your desired color */
-    box-shadow: none; /* Remove any box shadow added by default */
+    border-color: #04020d;
+    box-shadow: none;
   }
 
   /* Prevent default blue color on click for Chrome */
@@ -219,4 +221,11 @@ p {
   background-color: rgb(229, 229, 231);
   background-size: cover; /* Ensures the background image covers the entire element */
   width: 100%; /* Full width */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .card-top.container-fluid {
+    margin-top: 30px;
+  }
 }

@@ -68,3 +68,15 @@ h6 {
 .cancel-order-button:hover {
   background-color: #d5d5e4;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .order {
+    padding-left: 10%;
+    font-size: 15px;
+  }
+}
