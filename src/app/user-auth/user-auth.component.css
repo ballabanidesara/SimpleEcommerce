@@ -13,7 +13,7 @@
 .common-form {
   background-image: url("https://t3.ftcdn.net/jpg/05/86/22/54/240_F_586225463_N85DCX8UpwjYDonAuS0yMSgc2YULK3QD.jpg");
   width: 500px;
-  padding: 50px;
+  padding: 30px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
@@ -78,4 +78,17 @@ h3 {
 p {
   margin-top: 20px;
   color: white;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .common-form {
+    width: 90%;
+    padding: 30px;
+    margin-left: 20px;
+  }
+
+  .form-button {
+    width: 100%;
+  }
 }
