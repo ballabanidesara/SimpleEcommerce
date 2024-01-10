@@ -9,7 +9,7 @@
 
 .header {
   background-color: #04020d;
-  padding: 30px 0px 10px 0px;
+  padding: 40px 0px 10px 0px;
   border-top: 4px solid grey;
   position: fixed;
   top: 0px;
@@ -188,8 +188,13 @@ button.nofocus {
     font-size: 10px; /* Adjust user info font size for smaller screens */
   }
 
+  .user-info a {
+    padding-bottom: 10px;
+  }
+
   .pi-shopping-cart {
     font-size: 25px; /* Adjust shopping cart icon size for smaller screens */
+    padding-bottom: 10px;
   }
 
   .pi-user:before {

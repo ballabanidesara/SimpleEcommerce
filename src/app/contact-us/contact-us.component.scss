@@ -13,11 +13,12 @@
   font-style: italic;
   text-align: center;
   max-width: 1200px;
-  padding: 50px;
+  padding: 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #04020d;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
 }
 
 .contact-us h3 {
@@ -61,9 +62,10 @@ iframe {
   margin-bottom: 5px;
 }
 
-/* Adjust the responsive styles for different screen sizes if needed */
 @media screen and (max-width: 768px) {
   .contact-us {
-    padding-top: 150px;
+    padding-top: 180px;
+
   }
+ 
 }

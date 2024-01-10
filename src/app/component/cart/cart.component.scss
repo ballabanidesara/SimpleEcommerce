@@ -3,7 +3,6 @@
   background-size: cover; /* Ensure the background image covers the entire card */
   background-position: center;
   height: 60vh;
-  margin: 25px;
   padding: 25px;
   margin-top: 150px;
   border: 1px solid rgb(230, 235, 203);
@@ -98,7 +97,7 @@ h6 {
 
 @media screen and (max-width: 768px) {
   .container {
-    padding-top: 30px;
+    padding-top: 60px;
     padding-left: 0px;
     padding-right: 0px;
   }

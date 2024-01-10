@@ -100,9 +100,9 @@ p {
 .card-top.container-fluid {
   background-color: rgb(229, 229, 231);
   color: rgb(229, 229, 231);
-  height: 160px;
+  height: 180px;
   position: fixed;
-  top: 90px;
+  top: 115px;
   width: 100%;
   z-index: 102;
 
@@ -130,7 +130,6 @@ p {
   margin-top: 20px;
   background-color: rgb(229, 229, 231);
   border: none;
-
 }
 
 :host ::ng-deep .p-dataview-emptymessage {
@@ -223,9 +222,3 @@ p {
   width: 100%; /* Full width */
 }
 
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
-  .card-top.container-fluid {
-    margin-top: 30px;
-  }
-}
