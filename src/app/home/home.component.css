@@ -1,8 +1,8 @@
 .background-image {
-  background-image: url("https://img.freepik.com/premium-photo/digital-marketing-website-ad-email-social-network-seo-video-mobile-app-business-technology-development-e-commerce-online-shopping-concept-with-icons-pay-per-click-ppc-dashboard_27634-676.jpg");
+  background-image: url("https://t3.ftcdn.net/jpg/03/50/45/92/360_F_350459236_GhKZEIA43BA7qgE85zc4Vr2EEf7E2P89.jpg");
   background-size: cover;
   width: 100%;
-  height: 82vh;
+  height: 100vh;
 }
 
 .content {
@@ -35,4 +35,11 @@
   width: 800px;
   margin-top: 30px;
   text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .background-image {
+    height: 100vh;
+  }
 }
