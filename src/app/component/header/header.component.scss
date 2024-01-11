@@ -142,10 +142,10 @@ a {
 
 /* Styles for the shopping cart button */
 button.nofocus {
-  background: none; /* Set background to none */
-  border: none; /* Remove border */
-  padding: 0; /* Remove padding */
-  cursor: pointer; /* Set cursor to pointer */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 /* Responsive styles for smaller screens */
@@ -157,12 +157,12 @@ button.nofocus {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-right: 0; /* Adjust padding for smaller screens */
+    padding-right: 0;
   }
 
   .title-wrapper {
-    font-size: 20px; /* Adjust title font size for smaller screens */
-    margin-right: 0; /* Remove right margin for smaller screens */
+    font-size: 20px;
+    margin-right: 0;
   }
 
   .pi-search:before {
@@ -170,22 +170,22 @@ button.nofocus {
   }
 
   .pi-amazon:before {
-    font-size: 30px; /* Adjust Amazon icon size for smaller screens */
+    font-size: 30px;
   }
 
   .form-control {
-    height: 30px; /* Adjust form control height for smaller screens */
-    margin-left: 5px; /* Adjust form control left margin for smaller screens */
+    height: 30px;
+    margin-left: 5px;
     margin-top: 5px;
-    padding: 10px; /* Adjust form control padding for smaller screens */
+    padding: 10px;
   }
 
   .right-side-nav .profile-info {
-    font-size: 16px; /* Adjust profile info font size for smaller screens */
+    font-size: 16px;
   }
 
   .right-side-nav .user-info {
-    font-size: 10px; /* Adjust user info font size for smaller screens */
+    font-size: 10px;
   }
 
   .user-info a {
@@ -193,11 +193,74 @@ button.nofocus {
   }
 
   .pi-shopping-cart {
-    font-size: 25px; /* Adjust shopping cart icon size for smaller screens */
+    font-size: 25px;
     padding-bottom: 10px;
   }
 
   .pi-user:before {
-    font-size: 20px; /* Adjust user icon size for smaller screens */
+    font-size: 20px;
+  }
+}
+
+/* Media query for screens with max-width: 280px and max-height: 653px */
+@media screen and (max-width: 280px) and (max-height: 653px) {
+  .my-navbar,
+  .left-side-nav,
+  .right-side-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .title-wrapper {
+    font-size: 16px;
+    margin-right: 0;
+  }
+
+  .pi-search:before {
+    display: none;
+  }
+
+  .pi-amazon:before {
+    font-size: 25px;
+  }
+
+  .form-control {
+    height: 25px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 8px;
+  }
+
+  .right-side-nav .profile-info {
+    font-size: 14px;
+  }
+
+  .right-side-nav .user-info {
+    font-size: 8px;
+  }
+
+  .user-info a {
+    padding-bottom: 5px;
+  }
+
+  .pi-shopping-cart:before {
+    font-size: 18px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+  }
+
+  .pi-user:before {
+    font-size: 16px;
+  }
+
+  .pi-sign-out:before {
+    font-size: 12px;
+  }
+
+  .user-info a {
+    padding-right: 10px;
   }
 }
