@@ -3,11 +3,11 @@
   display: flex;
   justify-content: center;
   padding-top: 200px;
-  background-color: #04020d;
+  /* background-color: #04020d; */
   height: 80vh;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 85vh;
 }
 
 .common-form {
@@ -71,7 +71,7 @@
 
 h3 {
   padding-bottom: 30px;
-  color: white;
+  color: #04020d;
   font-weight: bold;
 }
 

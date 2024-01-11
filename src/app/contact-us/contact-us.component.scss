@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #04020d;
+  min-height: 81vh;
+  // background-color: #04020d;
   color: #fff;
   font-family: Arial, sans-serif;
 }
@@ -65,7 +65,5 @@ iframe {
 @media screen and (max-width: 768px) {
   .contact-us {
     padding-top: 180px;
-
   }
- 
 }

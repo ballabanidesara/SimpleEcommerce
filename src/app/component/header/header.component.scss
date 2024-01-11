@@ -105,6 +105,10 @@ a {
   text-decoration: none;
 }
 
+.profile-info a:hover {
+  color: rgb(212, 212, 212);
+}
+
 .user-info a {
   padding-right: 15px;
   font-weight: bold;

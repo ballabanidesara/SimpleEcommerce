@@ -2,9 +2,10 @@
   background-image: url("https://www.ssi-schaefer.com/resource/blob/1076888/b5bdadcababc0904a574ea9d675870c3/e-commerce-hero-dam-image-en-31561--data.jpg");
   background-size: cover; /* Ensure the background image covers the entire card */
   background-position: center;
-  height: 60vh;
+  height: 65vh;
   padding: 25px;
   margin-top: 150px;
+  margin-bottom: 60px;
   border: 1px solid rgb(230, 235, 203);
 }
 
@@ -42,7 +43,8 @@ h6 {
 }
 
 .cart-product {
-  background-color: #04020d;
+  background-color: rgb(229, 229, 231);
+  min-height: 70vh;
 }
 
 .table td,
@@ -50,12 +52,13 @@ h6 {
   padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
-  color: white;
+  color: #04020d;
   text-align: center;
 }
 
 .cancel-order-button {
   color: black;
+  background-color: #d5d5e4;
   width: 130px;
   padding: 8px 16px;
   border: none;
@@ -66,7 +69,7 @@ h6 {
 }
 
 .cancel-order-button:hover {
-  background-color: #d5d5e4;
+  background-color: #b2b2bb;
 }
 
 @media screen and (max-width: 768px) {

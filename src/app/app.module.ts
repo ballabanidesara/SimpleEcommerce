@@ -27,6 +27,7 @@ import { HomeComponent } from './home/home.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { OrdersComponent } from './orders/orders.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -56,7 +57,7 @@ import { OrdersComponent } from './orders/orders.component';
     }),
     AngularFireAuthModule
   ],
-  declarations: [AppComponent, ProductsComponent, HeaderComponent, CartComponent, FilterPipe, UserAuthComponent, ContactUsComponent, AboutUsComponent, HomeComponent, OrdersComponent],
+  declarations: [AppComponent, ProductsComponent, HeaderComponent, CartComponent, FilterPipe, UserAuthComponent, ContactUsComponent, AboutUsComponent, HomeComponent, OrdersComponent, FooterComponent],
   bootstrap: [AppComponent],
   providers: [ProductService]
 })

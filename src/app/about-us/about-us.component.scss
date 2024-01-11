@@ -2,15 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%; /* Set initial width to 50% */
+  width: 50%;
   margin: 0 auto;
-  overflow: hidden; /* Hide any overflow content */
+  overflow: hidden;
 }
 
 :host ::ng-deep .custom-carousel .p-carousel-item img.carousel-image {
-  width: 100%; /* Make the image responsive by setting its width to 100% */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 300px; /* Limit the maximum height of the images */
+  width: 100%;
+  height: auto;
+  max-height: 270px;
 }
 
 :host
@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .overlay-text {
@@ -90,7 +90,7 @@
   color: #04020d;
   flex: 1 1 300px;
   max-width: 400px;
-  height: 150px;
+  height: 140px;
 }
 
 .box p {
