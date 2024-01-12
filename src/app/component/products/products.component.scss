@@ -127,13 +127,17 @@ p {
 :host ::ng-deep .p-dataview-header {
   display: inline-flex;
   margin-left: 18px;
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: rgb(229, 229, 231);
   border: none;
 }
 
 :host ::ng-deep .p-dataview-emptymessage {
   margin-left: 35px;
+}
+
+:host ::ng-deep .p-paginator {
+  background-color: rgb(229, 229, 231);
 }
 
 :host::ng-deep {

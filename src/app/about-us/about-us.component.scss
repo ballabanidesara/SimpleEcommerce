@@ -10,7 +10,7 @@
 :host ::ng-deep .custom-carousel .p-carousel-item img.carousel-image {
   width: 100%;
   height: auto;
-  max-height: 270px;
+  max-height: 244px;
 }
 
 :host
@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 15px;
+  padding-bottom: 40px;
 }
 
 .overlay-text {
@@ -90,7 +90,7 @@
   color: white;
   flex: 1 1 300px;
   max-width: 400px;
-  height: 140px;
+  height: 120px;
 }
 
 .box p {
