@@ -100,3 +100,27 @@ p {
     padding-top: 160px;
   }
 }
+
+@media screen and (width: 375px) and (height: 667px) {
+  .user-auth {
+    padding-top: 160px;
+  }
+}
+
+@media screen and (width: 768px) and (height: 1024px) {
+  .user-auth {
+    height: 85vh;
+  }
+}
+
+@media screen and (width: 912px) and (height: 1368px) {
+  .user-auth {
+    height: 89vh;
+  }
+}
+
+@media screen and (width: 820px) and (height: 1180px) {
+  .user-auth {
+    height: 89vh;
+  }
+}

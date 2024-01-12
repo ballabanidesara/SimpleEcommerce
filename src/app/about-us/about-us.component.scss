@@ -11,6 +11,8 @@
   width: 100%;
   height: auto;
   max-height: 244px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 :host
@@ -90,7 +92,7 @@
   color: white;
   flex: 1 1 300px;
   max-width: 400px;
-  height: 120px;
+  height: 112px;
 }
 
 .box p {
@@ -184,5 +186,24 @@
     position: absolute;
     top: 20%;
     transform: translateX(-50%);
+  }
+}
+
+@media screen and (width: 820px) and (height: 1180px) {
+  .content {
+    padding-bottom: 180px;
+  }
+}
+
+@media screen and (width: 912px) and (height: 1368px) {
+  .content {
+    padding-bottom: 260px;
+  }
+}
+
+
+@media screen and (width: 1024px) and (height: 1366px) {
+  .content {
+    padding-bottom: 240px;
   }
 }
