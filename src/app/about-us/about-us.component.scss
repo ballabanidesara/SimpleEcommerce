@@ -10,9 +10,9 @@
 :host ::ng-deep .custom-carousel .p-carousel-item img.carousel-image {
   width: 100%;
   height: auto;
-  max-height: 244px;
-  padding-left: 30px;
-  padding-right: 30px;
+  max-height: 400px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 :host
@@ -27,14 +27,15 @@
 .about-us {
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 200px;
+  // height: 100vh;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 40px;
+  padding-bottom: 100px;
 }
 
 .overlay-text {
@@ -48,6 +49,7 @@
   font-style: italic;
   text-align: center;
   font-size: 1.1em;
+  line-height: 2;
 }
 
 .carousel-item {
@@ -92,7 +94,6 @@
   color: white;
   flex: 1 1 300px;
   max-width: 400px;
-  height: 112px;
 }
 
 .box p {
@@ -155,6 +156,13 @@
   }
 }
 
+:host ::ng-deep .p-carousel-content {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding-bottom: 50px;
+}
+
 /* Media query for screens with width 280px and height 653px */
 @media screen and (max-width: 280px) and (max-height: 653px) {
   /* Adjust overlay text for smaller screens */
@@ -164,6 +172,10 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .about-us {
+    height: 70vh;
   }
 }
 
@@ -176,6 +188,9 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  .about-us {
+    height: 70vh;
+  }
 }
 
 /* Media query for screens between 820px and 1180px */
@@ -187,11 +202,23 @@
     top: 20%;
     transform: translateX(-50%);
   }
+  .about-us {
+    height: 70vh;
+  }
+  .content {
+    padding-bottom: 40px;
+  }
 }
 
 @media screen and (width: 820px) and (height: 1180px) {
   .content {
     padding-bottom: 180px;
+  }
+  .about-us {
+    height: 70vh;
+  }
+  .content {
+    padding-bottom: 40px;
   }
 }
 
@@ -199,11 +226,22 @@
   .content {
     padding-bottom: 260px;
   }
+  .about-us {
+    height: 70vh;
+  }
+  .content {
+    padding-bottom: 40px;
+  }
 }
-
 
 @media screen and (width: 1024px) and (height: 1366px) {
   .content {
     padding-bottom: 240px;
+  }
+  .about-us {
+    height: 70vh;
+  }
+  .content {
+    padding-bottom: 40px;
   }
 }

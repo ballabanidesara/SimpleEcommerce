@@ -1,8 +1,13 @@
+.container {
+  margin-bottom: 20px;
+  max-width: 1140px;
+}
+
 .card {
   background-image: url("https://cdn.maqe.com/content/uploads/2021/07/22072853/Optimized-Shopping_cart_abandonment_rate-1024x683.jpg");
   background-size: cover; /* Ensure the background image covers the entire card */
   background-position: center;
-  height: 61vh;
+  height: 100vh;
   padding: 25px;
   margin-top: 160px;
   margin-bottom: 53px;
@@ -39,7 +44,7 @@ h6 {
 
 .center {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 35%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -71,7 +76,7 @@ h6 {
 
 .cart-product {
   background-color: rgb(229, 229, 231);
-  min-height: 70vh;
+  min-height: 90vh;
 }
 
 .table td,

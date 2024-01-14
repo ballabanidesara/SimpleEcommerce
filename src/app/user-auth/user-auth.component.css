@@ -2,9 +2,9 @@
 .user-auth {
   display: flex;
   justify-content: center;
-  padding-top: 200px;
+  padding-top: 300px;
   /* background-color: #04020d; */
-  height: 83vh;
+  height: 100vh;
   background-size: cover;
   width: 100%;
 }
