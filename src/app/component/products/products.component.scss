@@ -41,11 +41,14 @@ div.row {
   transform: scale(1.1);
 }
 
+
+
 .btn-primary {
   color: white;
   background-color: #04020d;
   border-color: #04020d;
   font-weight: bold;
+  margin-bottom: 10px;
 
   &:focus,
   &:active,

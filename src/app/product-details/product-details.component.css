@@ -1,121 +1,56 @@
 .container {
-    margin-bottom: 20px;
-    max-width: 1140px;
+  margin: 20px auto;
+  max-width: 800px;
+  height: 100vh;
+}
+
+.card-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-product {
+  background-color: rgb(229, 229, 231);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 120px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 30px;
+  text-align: left;
+  border: 1px solid white;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+h6 {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Additional styling for responsiveness */
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 10px;
   }
-  
-  .card {
-    background-image: url("https://cdn.maqe.com/content/uploads/2021/07/22072853/Optimized-Shopping_cart_abandonment_rate-1024x683.jpg");
-    background-size: cover; /* Ensure the background image covers the entire card */
-    background-position: center;
-    height: 100vh;
-    padding: 25px;
-    margin-top: 160px;
-    margin-bottom: 53px;
-    border: 1px solid rgb(230, 235, 203);
-  }
-  
-  .center img {
-    text-decoration: none;
-    color: inherit;
-    border: none;
-    outline: none;
-    height: 162px;
-    width: 250px;
-    margin: 20px 0px;
-  }
-  
-  .cart {
-    font-size: 18px;
-    font-style: italic;
-    font-weight: bold;
-    color: #04020d;
-  }
-  
-  h5 {
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: black;
-    margin-bottom: 8px;
-  }
-  
-  h6 {
-    margin-top: 40px;
-  }
-  
-  .center {
-    position: absolute;
-    top: 60%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .card-table {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: none;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.25rem;
-    margin-top: 124px;
-  }
-  
-  .center .btn {
-    font-size: 14px !important;
-    margin-top: 20px !important;
-    font-weight: 400;
-    padding: 12px 72px;
-    border-radius: 3px !important;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-  }
-  
-  .cart-product {
-    background-color: rgb(229, 229, 231);
-    min-height: 90vh;
-  }
-  
-  .table td,
-  .table th {
-    padding: 0.75rem;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
-    color: #04020d;
-  }
-  
-  .cart-button {
-    color: black;
-    width: 130px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-    border: 1px solid #04020d;
-  }
-  
-  .cart-button:hover {
-    background-color: #d5d5e4;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .container {
-      padding-top: 60px;
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-    .center {
-      padding-left: 10%;
-    }
-    .cart {
-      font-size: 15px;
-    }
-    h5 {
-      font-size: 13px;
-    }
-  }
-  
+}

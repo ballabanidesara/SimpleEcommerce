@@ -1,35 +1,32 @@
-<ng-container>
+<ng-container *ngIf="selectedProduct">
     <div class="container">
-      <div class="card-table">
-        <div class="cart-product">
-          <table class="table table-responsive">
-            <thead>
-              <tr>
-                <th>Product Name</th>
-                <th>Image</th>
-                <th>Description</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="width: 25%;">
-                  <h6>{{ selectedProduct?.title }}</h6>
-                </td>
-                <td>
-                  <img style="width: 100px; height:100px;" src="{{ selectedProduct?.image }}" alt="">
-                </td>
-                <td style="width: 35%;">
-                  {{ selectedProduct?.description }}
-                </td>
-                <th style="width: 18%;">
-                  <h6>{{ selectedProduct?.price }}</h6>
-                </th>
-              </tr>
-            </tbody>
-          </table>
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>PRODUCT DETAILS</th>
+                            <th>IMAGE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h6>Product Name:</h6>
+                                <p>{{ selectedProduct?.title }}</p>
+
+                                <h6>Description:</h6>
+                                <p>{{ selectedProduct?.description }}</p>
+                                <h6>Price:</h6>
+                                <p>{{ selectedProduct?.price }} $</p>
+                            </td>
+                            <td>
+                                <img src="{{ selectedProduct?.image }}" alt="Product Image">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-      </div>
     </div>
-  </ng-container>
-  
+</ng-container>
