@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { combineLatest, map, pipe, merge } from 'rxjs';
+import { combineLatest, map, pipe, merge, Observable } from 'rxjs';
 import { CategoryService } from './app/category.service';
 
 import { zip } from 'rxjs';
@@ -56,6 +56,16 @@ export class ProductService {
       })
     );
   }
+
+  // New method to get a product by ID
+  getProductById(productId: string): Observable<Product | undefined> {
+    return this.products$.pipe(
+      map((products: Product[]) => {
+        return products.find((product) => product.id === productId);
+      })
+    );
+  }
+
 
   getAllCategories() {
     return this.http.get('https://fakestoreapi.com/products/categories')

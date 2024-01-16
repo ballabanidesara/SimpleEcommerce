@@ -68,6 +68,7 @@
                 </p>
                 <p><strong>Price:</strong> ${{item.price}}</p>
                 <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+                <button class="btn btn-primary" (click)=addtocart(item)><a routerLink="/details/{{item.id}}">View Details</a></button>
               </div>
 
             </ng-container>
