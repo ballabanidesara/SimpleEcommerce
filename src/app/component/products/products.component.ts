@@ -14,6 +14,7 @@ import { CategoryService } from 'src/app/app/category.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
+  sortKey: string = '';
   searchKey: string = "";
   quantity: number = 1;
   public products: any;

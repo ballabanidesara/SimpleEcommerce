@@ -1,6 +1,22 @@
 // Product Card Style
+.price {
+  margin-left: 13rem !important;
+}
+
 :host ::ng-deep .p-dropdown .p-dropdown-label.p-placeholder {
   color: #04020d;
+  background-color: white;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+:host ::ng-deep .p-dropdown .p-dropdown-label.p-inputtext {
+  color: #04020d;
+  background-color: white;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: normal;
 }
 
 .product-category-icon {
@@ -21,6 +37,7 @@
 
 div.row {
   background-color: rgb(229, 229, 231);
+  margin-top: 250px;
 }
 
 .product-grid-item-content {
@@ -40,8 +57,6 @@ div.row {
   transition: 0.3s ease-in-out;
   transform: scale(1.1);
 }
-
-
 
 .btn-primary {
   color: white;
@@ -165,16 +180,14 @@ p {
 
 :host ::ng-deep .p-dropdown {
   background-color: rgb(229, 229, 231);
-  width: 14.5rem;
+  width: 14rem;
   border-width: 1px 0 1px 0;
-  border-color: #04020d;
-  padding: 0.5rem;
   font-weight: 600;
-  margin-top: 15rem;
   margin-right: 9rem;
 
   .p-dropdown-trigger {
     color: #04020d;
+    background-color: white;
   }
 
   .p-dropdown-items {
@@ -195,6 +208,7 @@ p {
     padding: 0.5rem 1rem;
   }
 
+  
   input.p-element {
     font-size: 15px;
   }
