@@ -14,7 +14,8 @@
   background-color: rgb(229, 229, 231);
   padding: 20px;
   border-radius: 8px;
-  margin-top: 150px;
+  margin-top: 170px;
+  width: 1000px;
 }
 
 .table {
@@ -44,7 +45,7 @@ h6 {
 img {
   width: 200px;
   height: 200px;
-  margin-top: 60px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -52,5 +53,18 @@ img {
 @media screen and (max-width: 600px) {
   .container {
     margin: 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .cart-product {
+    width: 90%; /* Adjust the width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cart-product {
+    width: 100%; /* Adjust the width for even smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+    margin-top: 100px; /* Adjust margin-top for smaller screens */
   }
 }

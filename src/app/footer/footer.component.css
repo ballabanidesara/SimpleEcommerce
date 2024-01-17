@@ -54,6 +54,77 @@ a:hover {
   color: rgb(212, 212, 212);
 }
 
+@media screen and (width: 280px) and (height: 653px) {
+  footer {
+    margin-top: 1300px;
+  }
+}
+
+@media screen and (width: 412px) and (height: 915px) {
+  footer {
+    margin-top: 1300px;
+  }
+}
+
+@media screen and (width: 412px) and (height: 914px) {
+  footer {
+    margin-top: 600px;
+  }
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
+  footer {
+    margin-top: 1200px;
+  }
+}
+
+@media screen and (width: 280px) and (height: 653px) {
+  footer {
+    margin-top: 800px;
+  }
+}
+
+@media screen and (width: 414px) and (height: 896px) {
+  footer {
+    margin-top: 610px;
+  }
+}
+
+@media screen and (width: 430px) and (height: 932px) {
+  footer {
+    margin-top: 610px;
+  }
+}
+
+@media screen and (width: 540px) and (height: 720px) {
+  footer {
+    margin-top: 610px;
+  }
+}
+
+@media screen and (width: 390px) and (height: 844px) {
+  footer {
+    margin-top: 610px;
+  }
+}
+
+@media screen and (width: 360px) and (height: 740px) {
+  footer {
+    margin-top: 750px;
+  }
+}
+
+@media screen and (width: 412px) and (height: 915px) {
+  footer {
+    margin-top: 600px;
+  }
+}
+
+@media screen and (width: 375px) and (height: 667px) {
+  footer {
+    margin-top: 850px;
+  }
+}
 
 @media screen and (width: 1024px) and (height: 600px) {
   footer {
