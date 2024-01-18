@@ -1,6 +1,5 @@
-// Product Card Style
 .price {
-  margin-left: 13rem !important;
+  margin-left: 13.5rem !important;
 }
 
 :host ::ng-deep .p-dropdown .p-dropdown-label.p-placeholder {
@@ -17,6 +16,7 @@
   padding: 8px;
   font-size: 13px;
   font-weight: normal;
+  padding-left: 20px;
 }
 
 .product-category-icon {
@@ -37,7 +37,6 @@
 
 div.row {
   background-color: rgb(229, 229, 231);
-  margin-top: 250px;
 }
 
 .product-grid-item-content {
@@ -69,8 +68,8 @@ div.row {
   &:active,
   &:focus:not(:focus-visible) {
     outline: none;
-    border-color: transparent !important; /* Reset border color to transparent */
-    box-shadow: none; /* Remove any box shadow added by default */
+    border-color: transparent !important;
+    box-shadow: none;
   }
 
   &:hover {
@@ -86,6 +85,20 @@ h5 {
   &:hover {
     color: rgb(84, 83, 85) !important;
   }
+}
+
+.sortbyprice {
+  margin-top: 20px;
+  font-size: 14px;
+  margin-left: 15px;
+  font-weight: 600;
+}
+
+.sortbycategory {
+  margin-top: 20px;
+  font-size: 14px;
+  margin-left: 15px;
+  font-weight: 600;
 }
 
 h6,
@@ -119,14 +132,14 @@ p {
   background-color: rgb(229, 229, 231);
   color: rgb(229, 229, 231);
   height: 180px;
-  position: fixed;
-  top: 100px;
+  // position: fixed;
+  margin-top: 120px;
   width: 100%;
   z-index: 102;
 
-  h6 {
+  .filterbycategory {
     margin-top: 20px;
-    font-size: 15px;
+    font-size: 14px;
     margin-left: 40px;
     font-weight: 600;
   }
@@ -206,14 +219,15 @@ p {
 
   .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
     padding: 0.5rem 1rem;
+    background-color: rgb(229, 229, 231);
+    color: #04020d;
+    font-size: 13px;
   }
 
-  
   input.p-element {
     font-size: 15px;
   }
 
-  /* Reset the default blue outline and border color on focus or click */
   &:focus,
   &:active,
   &:hover,
@@ -223,7 +237,6 @@ p {
     box-shadow: none;
   }
 
-  /* Prevent default blue color on click for Chrome */
   &:focus-visible {
     outline: none;
   }
@@ -234,12 +247,22 @@ p {
   width: 115%;
   margin-left: 30px;
   cursor: pointer;
-  color: #04020d;
 }
 
 .user-auth {
-  /* Set the background image URL */
   background-color: rgb(229, 229, 231);
-  background-size: cover; /* Ensures the background image covers the entire element */
-  width: 100%; /* Full width */
+  background-size: cover;
+  width: 100%;
+}
+
+:host
+  ::ng-deep
+  .p-dropdown
+  .p-dropdown-trigger
+  .p-dropdown-trigger-icon.p-icon {
+  width: 0.7rem !important;
+  height: 0.7rem !important;
+  color: black;
+  margin-left: 30px;
+  font-weight: 600 !important;
 }

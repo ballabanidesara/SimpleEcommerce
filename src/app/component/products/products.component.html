@@ -2,25 +2,28 @@
   <div class="card-top container-fluid">
     <div class="container d-flex">
       <div>
-        <h6>FILTER BY CATEGORY:</h6>
+        <p class="filterbycategory">FILTER BY CATEGORY:</p>
         <select class="form-control" (change)="onCategoryChange($event)">
           <option value="">All</option>
           <option value="{{option}}" *ngFor="let option of categories">{{option}}</option>
         </select>
+        
       </div>
 
       <div class="price">
-        <h6>SORT BY PRICE:</h6>
+        <p class="sortbyprice">SORT BY PRICE:</p>
         <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort by price..."
           (onChange)="onSortChange($event)" styleClass="mb-5"></p-dropdown>
       </div>
       <div class="category">
-        <h6>SORT BY CATEGORY:</h6>
+        <p class="sortbycategory">SORT BY CATEGORY:</p>
         <p-dropdown [options]="categorysortOptions" [(ngModel)]="sortKey" placeholder="Sort by category..."
           (onChange)="onSortChange($event)" styleClass="mb-5 md:mb-0"></p-dropdown>
       </div>
     </div>
   </div>
+
+  
   <div class="container" *ngIf="filteredProducts$ | async as products">
     <p-dataView #dv [value]="products" [rows]="6" [paginator]="true" [sortField]="sortField" [sortOrder]="sortOrder">
       <ng-template pTemplate="header">
