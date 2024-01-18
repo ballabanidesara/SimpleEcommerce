@@ -23,12 +23,12 @@ export class ProductsComponent {
   categories: any[] = [];
   sortOrder: number;
   sortField: string;
-
   selectedCategoryId = '';
   products$ = this.productService.products$;
   categories$ = this.categoryService.categories$
   selectedCategorySubject = new BehaviorSubject<string>('');
   selectedCategoryAction$ = this.selectedCategorySubject.asObservable();
+  loading: boolean = true; // Add this line
 
 
   filteredProducts$ = combineLatest([
@@ -76,6 +76,7 @@ export class ProductsComponent {
 
     this.primengConfig.ripple = true;
     this.getCategories()
+    this.loadProducts();
   }
 
   getProducts() {
@@ -88,6 +89,25 @@ export class ProductsComponent {
       this.categories = res;
     })
   }
+
+  loadProducts() {
+    this.loading = true; // Set loading to true before fetching data
+
+    this.productService.getAllProducts().subscribe(
+      (res) => {
+        this.products = res;
+        this.products.forEach((a: any) => {
+          Object.assign(a, { quantity: 1, total: a.price });
+        });
+        this.loading = false; // Set loading to false when products are loaded
+      },
+      (error) => {
+        console.error('Error loading products', error);
+        this.loading = false; // Set loading to false in case of an error
+      }
+    );
+  }
+
 
   // filterProductsCategory(event: any) {
   //   let value = event.target.value;

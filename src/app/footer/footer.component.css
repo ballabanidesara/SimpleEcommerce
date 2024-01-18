@@ -56,7 +56,7 @@ a:hover {
 
 @media screen and (width: 280px) and (height: 653px) {
   footer {
-    margin-top: 1300px;
+    margin-top: 4300px;
   }
 }
 
@@ -128,6 +128,12 @@ a:hover {
 
 @media screen and (width: 1024px) and (height: 600px) {
   footer {
-    margin-top: 100px;
+    margin-top: 500px;
+  }
+}
+
+@media screen and (width: 1280px) and (height: 800px) {
+  footer {
+    margin-top: 500px;
   }
 }

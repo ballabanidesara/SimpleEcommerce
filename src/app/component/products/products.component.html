@@ -7,7 +7,7 @@
           <option value="">All</option>
           <option value="{{option}}" *ngFor="let option of categories">{{option}}</option>
         </select>
-        
+
       </div>
 
       <div class="price">
@@ -23,34 +23,44 @@
     </div>
   </div>
 
-  
-  <div class="container" *ngIf="filteredProducts$ | async as products">
-    <p-dataView #dv [value]="products" [rows]="6" [paginator]="true" [sortField]="sortField" [sortOrder]="sortOrder">
-      <ng-template pTemplate="header">
-        <!-- Remove the second dropdown here -->
-      </ng-template>
-      <ng-template let-products pTemplate="list">
-        <div class="container">
-          <div class="row">
-            <ng-container *ngFor="let item of products | filter:searchKey:'title'">
-              <div class="card col-md-3">
-                <div class="product-grid-item-content">
-                  <div>
-                    <i class="pi pi-tag product-category-icon"></i>
-                    <span class="product-category">{{ item.category }}</span>
-                  </div>
-                  <img src="{{item.image}}" alt="">
-                </div>
-                <h6> <strong> {{item.title}} </strong> </h6>
-                <p>{{item.description}}</p>
-                <p><strong>Price:</strong> ${{item.price}}</p>
-                <button class="btn btn-primary" (click)=addtocart(item)>Add To Cart</button>
-                <button class="btn btn-primary" [routerLink]="'/details/' + item.id">View Details</button>
-              </div>
-            </ng-container>
-          </div>
-        </div>
-      </ng-template>
-    </p-dataView>
+
+  <div class="loading-spinner" *ngIf="loading; else productsSection">
+    <div class="spinner-border custom-spinner" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
   </div>
+
+
+
+  <ng-template #productsSection>
+    <div class="container" *ngIf="filteredProducts$ | async as products">
+      <p-dataView #dv [value]="products" [rows]="6" [paginator]="true" [sortField]="sortField" [sortOrder]="sortOrder">
+        <ng-template pTemplate="header">
+        </ng-template>
+        <ng-template let-products pTemplate="list">
+          <div class="container">
+            <div class="row">
+              <ng-container *ngFor="let item of products | filter:searchKey:'title'">
+                <div class="card col-md-3">
+                  <div class="product-grid-item-content">
+                    <div>
+                      <i class="pi pi-tag product-category-icon"></i>
+                      <span class="product-category">{{ item.category }}</span>
+                    </div>
+                    <img src="{{item.image}}" alt="">
+                  </div>
+                  <h6> <strong> {{item.title}} </strong> </h6>
+                  <p>{{item.description}}</p>
+                  <p><strong>Price:</strong> ${{item.price}}</p>
+                  <button class="btn btn-primary" (click)=addtocart(item)>Add To Cart</button>
+                  <button class="btn btn-primary" [routerLink]="'/details/' + item.id">View Details</button>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-template>
+      </p-dataView>
+    </div>
+
+  </ng-template>
 </div>
