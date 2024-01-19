@@ -15,6 +15,7 @@ footer {
   padding-top: 32px;
 }
 
+
 .footer-section h5 {
   margin-bottom: 10px;
   font-weight: bold;
@@ -54,7 +55,7 @@ a:hover {
   color: rgb(212, 212, 212);
 }
 
-@media screen and (width: 280px) and (height: 653px) {
+/* @media screen and (width: 280px) and (height: 653px) {
   footer {
     margin-top: 4300px;
   }
@@ -136,4 +137,34 @@ a:hover {
   footer {
     margin-top: 500px;
   }
+} */
+
+/* @media screen and (width: 768px) and (height: 1024px) {
+  footer {
+    margin-top: 800px;
+  }
 }
+
+@media screen and (width: 820px) and (height: 1180px) {
+  footer {
+    margin-top: 600px;
+  }
+}
+
+@media screen and (width: 912px) and (height: 1368px) {
+  footer {
+    margin-top: 400px;
+  }
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
+  footer {
+    margin-top: 1200px;
+  }
+}
+
+@media screen and (width: 1280px) and (height: 800px) {
+  footer {
+    margin-top: 400px;
+  }
+} */

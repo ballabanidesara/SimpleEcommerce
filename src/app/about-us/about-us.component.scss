@@ -245,3 +245,52 @@
     padding-bottom: 40px;
   }
 }
+
+@media screen and (width: 1280px) and (height: 800px) {
+  .content {
+    padding-bottom: 240px;
+  }
+  .about-us {
+    height: 120vh;
+  }
+  .content {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
+  .content {
+    padding-bottom: 240px;
+  }
+  .about-us {
+    height: 140vh;
+  }
+  .content {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (width: 280px) and (height: 653px) {
+  .content {
+    padding-bottom: 240px;
+  }
+  .about-us {
+    height: 200vh;
+  }
+  .content {
+    padding-bottom: 40px;
+  }
+}
+
+/* Apply styles for screens with a minimum width of 830px or higher */
+@media screen and (min-width: 830px) {
+  .content {
+    padding-bottom: 240px;
+  }
+  .about-us {
+    height: 120vh;
+  }
+  .content {
+    padding-bottom: 40px;
+  }
+}
