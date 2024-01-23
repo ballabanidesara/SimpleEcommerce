@@ -37,7 +37,6 @@
   align-items: center;
   justify-content: center;
   border-radius: 1vw;
-  margin-top: 200px;
   padding: 2vw;
   button {
     background-image: url("https://www.ssi-schaefer.com/resource/blob/1076888/b5bdadcababc0904a574ea9d675870c3/e-commerce-hero-dam-image-en-31561--data.jpg");
@@ -62,25 +61,29 @@
   padding: 1vw;
   width: 68vw;
   background: rgb(229, 229, 231);
+  margin-top: 60px;
 }
 
 .title {
-  color: black;
-  font-size: 1vw;
+  color: #080300;
+  font-size: 1.8vw;
   font-weight: bold;
   font-family: sans-serif;
   margin: 1vw auto;
   height: 3vw;
-  display: flex;
+  // display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Dancing Script", cursive;
 }
 .content {
-  color: #706f7a;
-  font-size: 0.9vw;
-  font-family: sans-serif;
+  color: #583f3b;
+  font-size: 1vw;
+  font-weight: bold;
+  font-family: "Josefin Slab", fantasy;
   line-height: 1.6vw;
   height: 3vw;
+  font-style: italic;
 }
 
 @media screen and (max-width: 768px) {
@@ -217,4 +220,40 @@
     line-height: 6.5vw;
     height: 14vw;
   }
+}
+
+.header-container {
+  background-image: url("https://newbird.com/app/uploads/2017/09/Blogging-for-eCommerce.jpg");
+  background-size: cover; /* Ensure the background image covers the entire card */
+  height: 50vh;
+  padding: 25px;
+  margin-top: 100px;
+  height: 60vh; /* Adjust the height as needed */
+  margin-bottom: 53px;
+  border: 1px solid rgb(230, 235, 203);
+}
+
+.footer-container {
+  background-image: url("https://dwijitsolutions.com/wp-content/uploads/2016/02/image-video-processing-research-pune-title.jpg");
+  background-size: cover; /* Ensure the background image covers the entire card */
+  padding: 25px;
+  margin-top: 100px;
+  height: 55vh; /* Adjust the height as needed */
+}
+
+.right {
+  position: absolute;
+  top: 25%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black;
+  font-family: "Josefin Slab", fantasy;
+  font-size: 24px; /* Adjust the font size as needed */
+  /* Additional styling properties can be added here */
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
 }
