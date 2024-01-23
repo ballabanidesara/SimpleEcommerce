@@ -14,6 +14,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'products', component: ProductsComponent },
+  { path: 'products/:category', component: ProductsComponent },
   { path: 'cart', component: CartComponent },
   { path: 'user-auth', component: UserAuthComponent },
   { path: 'home', component: HomeComponent },

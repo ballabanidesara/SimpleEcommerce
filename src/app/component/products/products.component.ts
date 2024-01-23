@@ -6,6 +6,7 @@ import { PrimeNGConfig } from 'primeng/api';
 import { BehaviorSubject, combineLatest, map, Observable } from 'rxjs';
 import { CartService } from 'src/app/service/cart.service';
 import { CategoryService } from 'src/app/app/category.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -28,7 +29,7 @@ export class ProductsComponent {
   categories$ = this.categoryService.categories$
   selectedCategorySubject = new BehaviorSubject<string>('');
   selectedCategoryAction$ = this.selectedCategorySubject.asObservable();
-  loading: boolean = true; // Add this line
+  loading: boolean = true;
 
 
   filteredProducts$ = combineLatest([
@@ -43,15 +44,22 @@ export class ProductsComponent {
 
   );
 
-
   constructor(
     private productService: ProductService,
     private cartService: CartService,
     private categoryService: CategoryService,
-    private primengConfig: PrimeNGConfig
+    private primengConfig: PrimeNGConfig,
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
+
+    this.route.paramMap.subscribe((paramMap) => {
+      const selectedCategory = paramMap.get('category');
+      this.selectedCategorySubject.next(selectedCategory || '');
+    });
+
     this.productService.getAllProducts().subscribe((res) => {
       this.products = res;
       this.products.forEach((a: any) => {
@@ -91,7 +99,7 @@ export class ProductsComponent {
   }
 
   loadProducts() {
-    this.loading = true; // Set loading to true before fetching data
+    this.loading = true;
 
     this.productService.getAllProducts().subscribe(
       (res) => {
@@ -99,38 +107,14 @@ export class ProductsComponent {
         this.products.forEach((a: any) => {
           Object.assign(a, { quantity: 1, total: a.price });
         });
-        this.loading = false; // Set loading to false when products are loaded
+        this.loading = false;
       },
       (error) => {
         console.error('Error loading products', error);
-        this.loading = false; // Set loading to false in case of an error
+        this.loading = false;
       }
     );
   }
-
-
-  // filterProductsCategory(event: any) {
-  //   let value = event.target.value;
-  //   if (value == "all") {
-  //     this.getProducts()
-  //   }
-  //   else {
-  //     this.getProductsCategory(value)
-  //   }
-
-  // }
-
-  // getProductsCategory(keyword: string) {
-  //   this.productService.getProductsByCategory(keyword).subscribe((res: any) => {
-  //     this.products = res;
-  //     this.products.forEach((a: any) => {
-  //       Object.assign(a, { quantity: 1, total: a.price });
-  //     });
-
-  //   })
-
-  // }
-
 
   onSortChange(event) {
     let value = event.value;
@@ -149,9 +133,16 @@ export class ProductsComponent {
 
   }
 
-  onCategoryChange(event: Event) {
-    let selectedCategoryId = (event.target as HTMLSelectElement).value;
+  onCategoryChange(event: Event): void {
+    const selectedCategoryId = (event.target as HTMLSelectElement).value;
+    console.log('Selected Category ID:', selectedCategoryId);
     this.selectedCategorySubject.next(selectedCategoryId);
+
+    if (selectedCategoryId) {
+      this.router.navigate(['/products', selectedCategoryId.toLowerCase()]);
+    } else {
+      this.router.navigate(['/products']);
+    }
   }
 
 }

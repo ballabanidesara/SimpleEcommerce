@@ -3,7 +3,7 @@
     <div class="body_subcontent">
       <div class="body_panel">
         <div class="panel-switcher">
-          <button mat-raised-button>
+          <button mat-raised-button [routerLink]="['/products', 'electronics']">
             <div class="title">
               Electronics
             </div>
@@ -11,7 +11,7 @@
               Discover cutting-edge electronics that redefine innovation.
             </div>
           </button>
-          <button mat-raised-button>
+          <button mat-raised-button [routerLink]="['/products', 'jewelery']">
             <div class="title">
               Jewelery
             </div>
@@ -19,7 +19,7 @@
               Explore exquisite jewelry on our elegant ecommerce platform.
             </div>
           </button>
-          <button mat-raised-button>
+          <button mat-raised-button [routerLink]="['/products', 'men\'s clothing']">
             <div class="title">
               Men's Clothing
             </div>
@@ -27,7 +27,7 @@
               Upgrade your style with the latest trends in men's fashion.
             </div>
           </button>
-          <button mat-raised-button>
+          <button mat-raised-button [routerLink]="['/products', 'women\'s clothing']">
             <div class="title">
               Women's Clothing
             </div>
