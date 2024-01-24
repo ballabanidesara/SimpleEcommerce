@@ -9,10 +9,13 @@
       <h1>W E L C O M E !</h1>
     </div>
   </div>
+  <div class="center">CHOOSE THE CATEGORY ...</div>
   <div class="body_content">
+
     <div class="body_subcontent">
       <div class="body_panel">
         <div class="panel-switcher">
+
           <button mat-raised-button [routerLink]="['/products', 'electronics']">
             <div class="title">
               Electronics
@@ -49,5 +52,12 @@
       </div>
     </div>
   </div>
-  <div class="footer-container"> </div>
+  <div class="footer-container">
+    <div class="shop_now">
+      <button routerLink="/products" class="cart-button">
+        <p class="shop">SHOP NOW ...</p>
+      </button>
+    </div>
+
+  </div>
 </div>
