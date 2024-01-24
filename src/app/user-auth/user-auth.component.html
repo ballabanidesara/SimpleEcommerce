@@ -22,7 +22,7 @@
 
 <div class="user-auth">
     <div *ngIf="!showLogin" class="sign-up">
-        <h3>User SignUp</h3>
+        <h3>SignUp to Your Account!</h3>
         <form [formGroup]="form" class="common-form" (ngSubmit)="signUp()" autocomplete="off">
             <input type="text" class="form-input" formControlName="email" placeholder="Enter User Name">
             <input type="text" class="form-input" formControlName="email" placeholder="Enter User Email"
@@ -55,7 +55,7 @@
 
     </div>
     <div *ngIf="showLogin" class="login">
-        <h3>User Login</h3>
+        <h3>Log in to Your Account!</h3>
         <form [formGroup]="form" class="common-form" (ngSubmit)="login()">
             <input type="text" class="form-input" formControlName="email" placeholder="Enter User Email">
             <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)">

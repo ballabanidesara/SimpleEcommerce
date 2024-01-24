@@ -1,5 +1,6 @@
 /* Styles for user authentication form */
 .user-auth {
+  background-image: url("https://img.freepik.com/free-photo/flat-lay-photo-office-desk-with-laptop-copy-space-background_1150-45598.jpg");
   display: flex;
   justify-content: center;
   padding-top: 300px;
@@ -26,6 +27,7 @@
   border-radius: 3px;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  font-family: "Josefin Slab", fantasy;
 }
 
 .form-button {
@@ -38,6 +40,8 @@
   color: #04020d;
   cursor: pointer;
   font-weight: bold;
+  font-weight: bold;
+  font-family: "Josefin Slab", fantasy;
 }
 
 /* .form-button:hover {
@@ -48,6 +52,8 @@
 .sign-up {
   text-align: center;
   margin-bottom: 20px;
+  position: absolute;
+  left: 45%;
 }
 
 .login h1,
@@ -69,6 +75,8 @@
 }
 
 h3 {
+  font-weight: bold;
+  font-family: "Josefin Slab", fantasy;
   padding-bottom: 30px;
   color: #04020d;
   font-weight: bold;
@@ -77,6 +85,8 @@ h3 {
 p {
   margin-top: 20px;
   color: white;
+  font-weight: bold;
+  font-family: "Josefin Slab", fantasy;
 }
 
 /* Media query for smaller screens */
