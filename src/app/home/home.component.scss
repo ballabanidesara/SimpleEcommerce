@@ -38,7 +38,7 @@
   justify-content: center;
   border-radius: 1vw;
   padding: 2vw;
-  margin-top: 50px;
+  margin-top: 250px;
   button {
     background-image: url("https://www.ssi-schaefer.com/resource/blob/1076888/b5bdadcababc0904a574ea9d675870c3/e-commerce-hero-dam-image-en-31561--data.jpg");
     background-size: cover; /* Ensure the background image covers the entire card */
@@ -96,11 +96,26 @@
   cursor: pointer;
   margin-top: 50px;
   border: 1px solid #04020d;
-  background-color: #a6a6aa
+  background-color: #a6a6aa;
 }
 
 .cart-button:hover {
   background-color: #909092;
+}
+
+.description {
+  position: absolute;
+  text-align: center;
+  top: 80%;
+  left: 50%;
+  color: #583f3b;
+  font-size: 1.1vw;
+  font-weight: bold;
+  font-family: "Josefin Slab", fantasy;
+  line-height: 1.8vw;
+  height: 3vw;
+  font-style: italic;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 768px) {
@@ -271,7 +286,7 @@
 
 .center {
   position: absolute;
-  top: 77%;
+  top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -301,4 +316,27 @@
 h1 {
   font-size: 40px;
   font-weight: bold;
+}
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust styles for screens up to 768px width */
+  .right {
+    top: 50%;
+    left: 50%;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust styles for screens up to 480px width */
+  .right {
+    top: 50%;
+    left: 50%;
+  }
+  h1 {
+    font-size: 25px;
+  }
 }
