@@ -22,7 +22,15 @@
 
 .contact-us p {
   line-height: 1.6;
+  font-size: 18px;
+  margin-bottom: 50px;
   color: black;
+  font-family: "Josefin Slab", fantasy;
+}
+
+p.contact-message {
+  font-weight: bold;
+  font-size: 20px !important;
 }
 
 .map-container {
@@ -46,10 +54,12 @@ iframe {
   color: black;
   margin-top: 0;
   font-weight: bold;
+  font-family: "Josefin Slab", fantasy;
 }
 
 .contact-details address {
-  font-style: normal;
+  font-size: 18px;
+  font-family: "Josefin Slab", fantasy;
 }
 
 .contact-details p {
