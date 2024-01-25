@@ -1,11 +1,10 @@
 .user-auth {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   min-height: 100vh;
-  // background-color: #04020d;
-  color: #fff;
-  font-family: Arial, sans-serif;
+  background-image: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpapers.com%2Fimages%2Fhd%2F2440x1440-office-background-2440-x-1440-82eeic10fd5b1qb6.jpg");
+  background-size: cover;
 }
 
 .contact-us {
@@ -13,22 +12,17 @@
   font-style: italic;
   text-align: center;
   max-width: 1200px;
-  padding: 40px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #04020d;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  margin-top: 100px;
+  padding: 60px;
 }
 
 .contact-us h3 {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 .contact-us p {
   line-height: 1.6;
-  color: white;
+  color: black;
 }
 
 .map-container {
@@ -44,12 +38,12 @@ iframe {
 .contact-details {
   border-left: 1px solid #ccc;
   padding-left: 30px;
-  color: white;
-  background-color: #04020d;
+  color: black;
+  // background-color: white;
 }
 
 .contact-details h5 {
-  color: white;
+  color: black;
   margin-top: 0;
   font-weight: bold;
 }
@@ -65,5 +59,6 @@ iframe {
 @media screen and (max-width: 768px) {
   .contact-us {
     padding-top: 180px;
+    background-color: #e7e6e3;
   }
 }
