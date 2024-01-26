@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ProductService } from './productservice';
@@ -29,6 +29,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { OrdersComponent } from './orders/orders.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 
 @NgModule({
   imports: [
@@ -47,6 +50,13 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ReactiveFormsModule,
     AppRoutingModule,
     CarouselModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json'),
+        deps: [HttpClient]
+      }
+    }),
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyCkMo7ti4_YfMoBoU7trwPbUtvenyeFjr8",
       authDomain: "simple-e-commerce-3fbe8.firebaseapp.com",
@@ -64,3 +74,4 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 })
 
 export class AppModule { }
+

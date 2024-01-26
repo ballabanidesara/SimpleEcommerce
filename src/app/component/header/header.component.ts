@@ -4,6 +4,7 @@ import { ProductService } from 'src/app/productservice';
 import { AuthenticationService } from 'src/app/service/authentication.service';
 import { CartService } from 'src/app/service/cart.service';
 import { Router, NavigationEnd } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 enum MenuType {
   Default = 'default',
@@ -21,7 +22,12 @@ export class HeaderComponent implements OnInit {
   searchResult: undefined | Product[];
   cartItems = 0;
   menuType: MenuType = MenuType.Default;
-  constructor(private authService: AuthenticationService, private route: Router, private product: ProductService, private cartService: CartService) { }
+  currentLanguage: string;
+  constructor(private authService: AuthenticationService, private route: Router, private product: ProductService,
+    private cartService: CartService, private translate: TranslateService) {
+    this.currentLanguage = translate.currentLang?.toUpperCase();
+  }
+
 
 
   private extractUsername(email: string | null): string {
@@ -47,6 +53,11 @@ export class HeaderComponent implements OnInit {
         });
       }
     });
+
+    const defaultLanguage = 'en';
+    this.translate.setDefaultLang(defaultLanguage);
+    this.translate.use(defaultLanguage);
+    this.currentLanguage = this.getLanguageWithFlag(defaultLanguage);
   }
 
 
@@ -74,6 +85,20 @@ export class HeaderComponent implements OnInit {
   search(event: any) {
     this.searchTerm = (event.target as HTMLInputElement).value;
     this.cartService.search.next(this.searchTerm);
+  }
+
+  switchLanguage(language: string): void {
+    this.translate.use(language);
+    this.currentLanguage = this.getLanguageWithFlag(language);
+  }
+
+  private getLanguageWithFlag(language: string): string {
+    const flagMap = {
+      'en': '🇬🇧',
+      'it': '🇮🇹',
+    };
+
+    return `${flagMap[language]} ${language.toUpperCase()}`;
   }
 
 

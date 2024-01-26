@@ -19,14 +19,28 @@
                         <a routerLink="home">HOME</a>
                         <a routerLink="about-us">ABOUT US</a>
                         <a routerLink="contact-us">CONTACT US</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                {{ currentLanguage }}
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" (click)="switchLanguage('en')">🇬🇧 English</a>
+                                <a class="dropdown-item" (click)="switchLanguage('it')">🇮🇹 Italiano</a>
+                            </div>
+                        </div>
+
                         <button class="nofocus" routerLink="cart">
                             <i class="pi pi-shopping-cart"></i>
                             <div class="badge bg-danger">{{cartLength}}</div>
                         </button>
+
                         <a routerLink="user-auth">
                             <i class="pi pi-user"></i>
                         </a>
                     </div>
+
 
                     <div class="user-info" *ngSwitchCase="'user'">
                         <a routerLink="home">HOME</a>
@@ -34,6 +48,16 @@
                         <a routerLink="contact-us">CONTACT US</a>
                         <a routerLink="orders">ORDERS</a>
                         <a>{{userName | uppercase}}</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                {{ currentLanguage }}
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" (click)="switchLanguage('en')">🇬🇧 English</a>
+                                <a class="dropdown-item" (click)="switchLanguage('it')">🇮🇹 Italiano</a>
+                            </div>
+                        </div>
                         <a (click)="userLogout()" style="cursor: pointer;"> <i class="pi pi-sign-out"></i></a>
                         <button class="nofocus" routerLink="cart">
                             <i class="pi pi-shopping-cart"></i>
