@@ -102,7 +102,6 @@ a {
   padding-left: 15px;
   padding-right: 15px;
   font-weight: bold;
-  // color: white;
   text-decoration: none;
   cursor: pointer;
 }
@@ -112,9 +111,10 @@ a {
 }
 
 .user-info a {
-  padding-right: 18px;
+  padding-right: 19px;
   font-weight: bold;
   text-decoration: none;
+  text-align: center;
 }
 
 .user-info a:hover {
@@ -130,7 +130,7 @@ a {
 .right-side-nav .user-info {
   display: flex;
   align-items: center;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .pi-shopping-cart:before {
@@ -287,6 +287,7 @@ a.dropdown-item {
   font-weight: bold;
   background-color: black;
   outline: none;
+  font-size: 17px;
 }
 
 .language-dropdown .btn:focus {
