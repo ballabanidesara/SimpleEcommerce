@@ -67,7 +67,7 @@ button {
 }
 
 .pi-shopping-cart {
-  font-size: 32px;
+  font-size: 29px;
 }
 
 .pi-amazon:before {
@@ -103,6 +103,7 @@ a {
   padding-right: 15px;
   font-weight: bold;
   text-decoration: none;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -153,127 +154,6 @@ button.nofocus {
   cursor: pointer;
 }
 
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
-  .my-navbar,
-  .left-side-nav,
-  .right-side-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-right: 0;
-  }
-
-  .header {
-    padding: 10px;
-  }
-
-  .title-wrapper {
-    font-size: 20px;
-    margin-right: 0;
-  }
-
-  .pi-search:before {
-    display: none;
-  }
-
-  .pi-amazon:before {
-    font-size: 30px;
-  }
-
-  .form-control {
-    height: 30px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 10px;
-  }
-
-  .right-side-nav .profile-info {
-    font-size: 14px;
-  }
-
-  .right-side-nav .user-info {
-    font-size: 10px;
-  }
-
-  .user-info a {
-    padding-bottom: 10px;
-  }
-
-  .pi-shopping-cart {
-    font-size: 25px;
-    padding-bottom: 10px;
-  }
-
-  .pi-user:before {
-    font-size: 20px;
-  }
-}
-
-/* Media query for screens with max-width: 280px and max-height: 653px */
-@media screen and (max-width: 280px) and (max-height: 653px) {
-  .my-navbar,
-  .left-side-nav,
-  .right-side-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-right: 0;
-  }
-
-  .title-wrapper {
-    font-size: 16px;
-    margin-right: 0;
-  }
-
-  .pi-search:before {
-    display: none;
-  }
-
-  .pi-amazon:before {
-    font-size: 25px;
-  }
-
-  .form-control {
-    height: 25px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 8px;
-  }
-
-  .right-side-nav .profile-info {
-    font-size: 10px;
-  }
-
-  .right-side-nav .user-info {
-    font-size: 8px;
-  }
-
-  .user-info a {
-    padding-bottom: 5px;
-  }
-
-  .pi-shopping-cart:before {
-    font-size: 18px;
-    padding-bottom: 5px;
-    padding-left: 0px;
-  }
-
-  .pi-user:before {
-    font-size: 16px;
-  }
-
-  :host ::ng-deep .pi-sign-out::before {
-    font-size: 10px;
-  }
-
-  .user-info a {
-    padding-right: 10px;
-  }
-}
-
 a.dropdown-item {
   font-size: 15px;
   cursor: pointer;
@@ -321,4 +201,152 @@ a.dropdown-item {
 
 .language-dropdown .dropdown-item:hover {
   background-color: #f2f2f2;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .my-navbar,
+  .left-side-nav,
+  .right-side-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .title-wrapper {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  .pi-search:before {
+    display: none;
+  }
+
+  .pi-amazon:before {
+    font-size: 30px;
+  }
+
+  .form-control {
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 10px;
+  }
+
+  .right-side-nav .profile-info {
+    font-size: 12px;
+  }
+
+  .right-side-nav .user-info {
+    font-size: 10px;
+  }
+
+  .pi-shopping-cart {
+    font-size: 15px;
+    padding-left: none;
+  }
+
+  .pi-user:before {
+    font-size: 20px;
+  }
+
+  .pi-sign-out:before {
+    font-size: 12px;
+  }
+
+  .language-dropdown .btn {
+    font-size: 10px;
+  }
+
+  .profile-info a {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .language-dropdown-profile .btn {
+    font-weight: bold;
+    background-color: black;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .user-info a {
+    padding-right: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .bg-danger[_ngcontent-ng-c492893108] {
+    font-size: 5px;
+  }
+}
+
+@media screen and (max-width: 280px) and (max-height: 653px) {
+  .my-navbar,
+  .left-side-nav,
+  .right-side-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title-wrapper {
+    font-size: 16px;
+    margin-right: 0;
+  }
+
+  .pi-search:before {
+    display: none;
+  }
+
+  .pi-amazon:before {
+    font-size: 25px;
+  }
+
+  .form-control {
+    height: 25px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 8px;
+  }
+
+  .right-side-nav .profile-info {
+    font-size: 10px;
+  }
+
+  .right-side-nav .user-info {
+    font-size: 7px;
+  }
+
+  .pi-shopping-cart:before {
+    font-size: 15px;
+    padding-left: 0px;
+  }
+
+  .pi-user:before {
+    font-size: 16px;
+  }
+
+  :host ::ng-deep .pi-sign-out::before {
+    font-size: 10px;
+  }
+
+  .language-dropdown .btn {
+    font-size: 10px;
+  }
+
+  .language-dropdown-profile .btn {
+    font-size: 12px;
+  }
 }
