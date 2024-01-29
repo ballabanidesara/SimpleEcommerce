@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { combineLatest, map, pipe, merge, Observable } from 'rxjs';
-import { CategoryService } from './app/category.service';
+import { CategoryService } from './service/category.service';
 
 import { zip } from 'rxjs';
 import { Product } from './product';

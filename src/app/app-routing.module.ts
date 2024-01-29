@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { CartComponent } from './component/cart/cart.component';
 import { ProductsComponent } from './component/products/products.component';
 import { RouterModule, Routes } from '@angular/router';
-import { UserAuthComponent } from './user-auth/user-auth.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { HomeComponent } from './home/home.component';
-import { OrdersComponent } from './orders/orders.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { UserAuthComponent } from './component/user-auth/user-auth.component';
+import { ContactUsComponent } from './component/contact-us/contact-us.component';
+import { AboutUsComponent } from './component/about-us/about-us.component';
+import { HomeComponent } from './component/home/home.component';
+import { ProductDetailsComponent } from './component/product-details/product-details.component';
+import { OrdersComponent } from './component/orders/orders.component';
 
 
 const routes: Routes = [

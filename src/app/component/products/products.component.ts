@@ -5,7 +5,7 @@ import { SelectItem } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
 import { BehaviorSubject, combineLatest, map, Observable } from 'rxjs';
 import { CartService } from 'src/app/service/cart.service';
-import { CategoryService } from 'src/app/app/category.service';
+import { CategoryService } from 'src/app/service/category.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
