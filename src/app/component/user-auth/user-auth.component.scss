@@ -95,14 +95,23 @@ p {
   .form-button {
     width: 100%;
   }
+  .login,
+  .sign-up {
+    left: 2%;
+  }
 }
 
 @media screen and (width: 280px) and (height: 653px) {
   h3 {
     padding-bottom: 5px;
+    padding-top: 40px;
   }
   .user-auth {
     padding-top: 160px;
+  }
+  .login,
+  .sign-up {
+    left: 2%;
   }
 }
 
@@ -110,11 +119,19 @@ p {
   .user-auth {
     padding-top: 160px;
   }
+  .login,
+  .sign-up {
+    left: 2%;
+  }
 }
 
 @media screen and (width: 768px) and (height: 1024px) {
   .user-auth {
     height: 85vh;
+  }
+  .login,
+  .sign-up {
+    left: 15%;
   }
 }
 
@@ -122,10 +139,28 @@ p {
   .user-auth {
     height: 89vh;
   }
+  .login,
+  .sign-up {
+    left: 25%;
+  }
 }
 
 @media screen and (width: 820px) and (height: 1180px) {
   .user-auth {
     height: 89vh;
+  }
+  .login,
+  .sign-up {
+    left: 20%;
+  }
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
+  .user-auth {
+    padding-top: 170px;
+  }
+  .login,
+  .sign-up {
+    left: 30%;
   }
 }
