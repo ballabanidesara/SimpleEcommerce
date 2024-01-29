@@ -1,4 +1,23 @@
 {
-  "welcome": "W E L C O M E",
-  "desc": "Welcome to our online store, where innovation meets style! Explore our vast collection of cutting-edge electronics, featuring the latest in technology. Elevate your fashion game with our chic men's and women's clothing lines, showcasing the trendiest styles for every occasion."
+  "welcome": "W E L C O M E !",
+  "desc": "Welcome to our online store, where innovation meets style! Explore our vast collection of cutting-edge electronics, featuring the latest in technology. Elevate your fashion game with our chic men's and women's clothing lines, showcasing the trendiest styles for every occasion.",
+  "choose": "Choose the category . . .",
+  "electronics": "Electronics",
+  "jewelery": "Jewelery",
+  "men": "Men's Clothing",
+  "women": "Women's Clothing",
+  "discover": "Discover cutting-edge electronics that redefine innovation.",
+  "explore": "Explore exquisite jewelry on our elegant ecommerce platform.",
+  "upgrade": "Upgrade your style with the latest trends in men's fashion.",
+  "chic": "Discover chic women's clothing for every occasion.",
+  "shop": "Shop Now . . . ",
+  "navigation": "Navigation",
+  "contact": "Contact Us",
+  "follow": "Follow Us",
+  "home": "Home",
+  "shop_now": "Shop",
+  "about": "About Us",
+  "ab": "About",
+  "cont": "Contact",
+  "order": "Orders"
 }

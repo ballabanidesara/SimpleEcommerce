@@ -16,8 +16,8 @@
                 <span class="profile-name p-d-flex">
                     <div class="profile-info" *ngSwitchCase="'default'">
                         <a routerLink="home">HOME</a>
-                        <a routerLink="about-us">ABOUT US</a>
-                        <a routerLink="contact-us">CONTACT US</a>
+                        <a routerLink="about-us">{{ 'about' | translate | uppercase }}</a>
+                        <a routerLink="contact-us">{{ 'contact' | translate | uppercase }}</a>
                         <div class="language-dropdown-profile">
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
@@ -39,9 +39,9 @@
                     </div>
                     <div class="user-info" *ngSwitchCase="'user'">
                         <a routerLink="home">HOME</a>
-                        <a routerLink="about-us">ABOUT</a>
-                        <a routerLink="contact-us">CONTACT</a>
-                        <a routerLink="orders">ORDERS</a>
+                        <a routerLink="about-us">{{ 'ab' | translate | uppercase }}</a>
+                        <a routerLink="contact-us">{{ 'cont' | translate | uppercase }}</a>
+                        <a routerLink="orders">{{ 'order' | translate | uppercase }}</a>
                         <a>{{userName | uppercase}}</a>
 
                         <a (click)="userLogout()" style="cursor: pointer;"> <i class="pi pi-sign-out"></i></a>

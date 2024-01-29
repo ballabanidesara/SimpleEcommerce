@@ -1,4 +1,23 @@
 {
-  "welcome": "B E N V E N U T O",
-  "desc": "Benvenuti nel nostro negozio online, dove l'innovazione incontra lo stile! Esplora la nostra vasta collezione di dispositivi elettronici all'avanguardia, con le ultime novità tecnologiche. Eleva il tuo stile con le nostre eleganti linee di abbigliamento maschile e femminile, presentando gli stili più trendy per ogni occasione."
+  "welcome": "B E N V E N U T O !",
+  "desc": "Benvenuti nel nostro negozio online, dove l'innovazione incontra lo stile! Esplora la nostra vasta collezione di dispositivi elettronici all'avanguardia, con le ultime novità tecnologiche. Eleva il tuo stile con le nostre eleganti linee di abbigliamento maschile e femminile, presentando gli stili più trendy per ogni occasione.",
+  "choose": "Scegli la categoria . . .",
+  "electronics": "Elettronica",
+  "jewelery": "Gioielleria",
+  "men": "Abbigliamento Uomo",
+  "women": "Abbigliamento Donna",
+  "discover": "Scopri l'elettronica all'avanguardia che ridefinisce l'innovazione.",
+  "explore": "Esplora gioielli squisiti sulla nostra elegante piattaforma di e-commerce.",
+  "upgrade": "Migliora il tuo stile con le ultime tendenze della moda maschile.",
+  "chic": "Scopri l'abbigliamento femminile chic per ogni occasione.",
+  "shop": "Compra Ora . . .",
+  "navigation": "Navigazione",
+  "contact": "Contattaci",
+  "follow": "Seguici",
+  "home": "Home",
+  "shop_now": "Negozio",
+  "about": "Chi Siamo",
+  "ab": "Chi Siamo",
+  "cont": "Contattaci",
+  "order": "Ordini"
 }

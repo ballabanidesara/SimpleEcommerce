@@ -6,10 +6,10 @@
 <div class="body">
   <div class="header-container">
     <div class="right">
-      <h1>{{ 'welcome' | translate }}</h1>
+      <h1>{{ 'welcome' | translate }} </h1>
     </div>
   </div>
-  <div class="center">CHOOSE THE CATEGORY ...</div>
+  <div class="center">{{ 'choose' | translate | uppercase}}</div>
   <div class="body_content">
 
     <div class="body_subcontent">
@@ -21,34 +21,34 @@
 
           <button mat-raised-button [routerLink]="['/products', 'electronics']">
             <div class="title">
-              Electronics
+              {{ 'electronics' | translate }}
             </div>
             <div class="content">
-              Discover cutting-edge electronics that redefine innovation.
+              {{ 'discover' | translate }}
             </div>
           </button>
           <button mat-raised-button [routerLink]="['/products', 'jewelery']">
             <div class="title">
-              Jewelery
+              {{ 'jewelery' | translate }}
             </div>
             <div class="content">
-              Explore exquisite jewelry on our elegant ecommerce platform.
+              {{ 'explore' | translate }}
             </div>
           </button>
           <button mat-raised-button [routerLink]="['/products', 'men\'s clothing']">
             <div class="title">
-              Men's Clothing
+              {{ 'men' | translate }}
             </div>
             <div class="content">
-              Upgrade your style with the latest trends in men's fashion.
+              {{ 'upgrade' | translate }}
             </div>
           </button>
           <button mat-raised-button [routerLink]="['/products', 'women\'s clothing']">
             <div class="title">
-              Women's Clothing
+              {{ 'women' | translate }}
             </div>
             <div class="content">
-              Discover chic women's clothing for every occasion.
+              {{ 'chic' | translate }}
             </div>
           </button>
         </div>
@@ -58,7 +58,7 @@
   <div class="footer-container">
     <div class="shop_now">
       <button routerLink="/products" class="cart-button">
-        <p class="shop">SHOP NOW ...</p>
+        <p class="shop"> {{ 'shop' | translate }}</p>
       </button>
     </div>
 
