@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-user-auth',
   templateUrl: './user-auth.component.html',
-  styleUrls: ['./user-auth.component.css']
+  styleUrls: ['./user-auth.component.scss']
 })
 export class UserAuthComponent implements OnInit {
   form!: FormGroup;

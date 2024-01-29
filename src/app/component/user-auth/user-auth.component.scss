@@ -1,17 +1,18 @@
-/* Styles for user authentication form */
+$userAuthBackground: url("https://img.freepik.com/free-photo/flat-lay-photo-office-desk-with-laptop-copy-space-background_1150-45598.jpg");
+$commonFormBackground: url("https://t3.ftcdn.net/jpg/05/86/22/54/240_F_586225463_N85DCX8UpwjYDonAuS0yMSgc2YULK3QD.jpg");
+
 .user-auth {
-  background-image: url("https://img.freepik.com/free-photo/flat-lay-photo-office-desk-with-laptop-copy-space-background_1150-45598.jpg");
+  background-image: $userAuthBackground;
   display: flex;
   justify-content: center;
   padding-top: 300px;
-  /* background-color: #04020d; */
   height: 100vh;
   background-size: cover;
   width: 100%;
 }
 
 .common-form {
-  background-image: url("https://t3.ftcdn.net/jpg/05/86/22/54/240_F_586225463_N85DCX8UpwjYDonAuS0yMSgc2YULK3QD.jpg");
+  background-image: $commonFormBackground;
   width: 500px;
   padding: 30px;
   border: 1px solid #ccc;
@@ -40,13 +41,8 @@
   color: #04020d;
   cursor: pointer;
   font-weight: bold;
-  font-weight: bold;
   font-family: "Josefin Slab", fantasy;
 }
-
-/* .form-button:hover {
-  background-color: #5c5d5f;
-} */
 
 .login,
 .sign-up {
@@ -79,7 +75,6 @@ h3 {
   font-family: "Josefin Slab", fantasy;
   padding-bottom: 30px;
   color: #04020d;
-  font-weight: bold;
 }
 
 p {
@@ -89,7 +84,7 @@ p {
   font-family: "Josefin Slab", fantasy;
 }
 
-/* Media query for smaller screens */
+// Media query for smaller screens
 @media screen and (max-width: 768px) {
   .common-form {
     width: 90%;
