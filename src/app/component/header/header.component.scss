@@ -283,6 +283,22 @@ a.dropdown-item {
   font-weight: bold;
 }
 
+.language-dropdown-profile .btn {
+  font-weight: bold;
+  background-color: black;
+  outline: none;
+  font-size: 19px;
+}
+
+.language-dropdown-profile .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.language-dropdown-profile .dropdown-menu {
+  min-width: 100px;
+}
+
 .language-dropdown .btn {
   font-weight: bold;
   background-color: black;

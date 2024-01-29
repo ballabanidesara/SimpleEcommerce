@@ -18,7 +18,7 @@
                         <a routerLink="home">HOME</a>
                         <a routerLink="about-us">ABOUT US</a>
                         <a routerLink="contact-us">CONTACT US</a>
-                        <div class="language-dropdown">
+                        <div class="language-dropdown-profile">
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 {{ currentLanguage }}
@@ -39,8 +39,8 @@
                     </div>
                     <div class="user-info" *ngSwitchCase="'user'">
                         <a routerLink="home">HOME</a>
-                        <a routerLink="about-us">ABOUT US</a>
-                        <a routerLink="contact-us">CONTACT US</a>
+                        <a routerLink="about-us">ABOUT</a>
+                        <a routerLink="contact-us">CONTACT</a>
                         <a routerLink="orders">ORDERS</a>
                         <a>{{userName | uppercase}}</a>
 
