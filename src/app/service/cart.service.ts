@@ -1,19 +1,16 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-
   public cartItemList: any = []
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
-
-  constructor(
-    private db: AngularFireDatabase
-  ) { }
+  constructor() {
+    this.loadCartFromLocalStorage();
+  }
 
   getProducts() {
     return this.productList.asObservable();
@@ -24,18 +21,38 @@ export class CartService {
     this.productList.next(product);
   }
 
+  productList$ = this.productList.asObservable();
 
-  addtoCart(product) {
-    let cartId = localStorage.getItem('cartId');
-
-    if (!cartId) {
-      this.db.list('/shoppingcart').push({
-        dateCreated: new Date().getTime()
-      })
-
+  addtoCart(product: any): void {
+    const productExistInCart = this.cartItemList.find(({ title }) => title === product.title);
+    if (!productExistInCart) {
+      product.quantity = 1;
+      this.cartItemList.push(product);
+    } else if (typeof productExistInCart.quantity === 'number') {
+      productExistInCart.quantity += 1;
+    } else {
+      productExistInCart.quantity = 1;
     }
 
-    // Rest of your code...
+    console.log('Cart before update:', this.cartItemList); // Log the cart before the update
+    this.productList.next(this.cartItemList);
+    this.saveCartToLocalStorage(); // Save the updated cart to local storage
+    console.log('Cart after update:', this.cartItemList); // Log the cart after the update
+    this.getTotalPrice();
+  }
+
+  private saveCartToLocalStorage(): void {
+    // Save the cart data to local storage
+    localStorage.setItem('cartItemList', JSON.stringify(this.cartItemList));
+  }
+
+  private loadCartFromLocalStorage(): void {
+    // Load the cart data from local storage during service initialization
+    const savedCart = localStorage.getItem('cartItemList');
+    if (savedCart) {
+      this.cartItemList = JSON.parse(savedCart);
+      this.productList.next(this.cartItemList);
+    }
   }
 
 
