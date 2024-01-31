@@ -25,6 +25,7 @@ const routes: Routes = [
     path: 'details/:productId',
     component: ProductDetailsComponent
   },
+  { path: '**', redirectTo: 'home' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

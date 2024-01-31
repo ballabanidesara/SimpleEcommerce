@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,9 @@ export class CartService {
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
 
-  constructor() { }
+  constructor(
+    private db: AngularFireDatabase
+  ) { }
 
   getProducts() {
     return this.productList.asObservable();
@@ -22,24 +25,38 @@ export class CartService {
   }
 
 
-  addtoCart(product: any) {
-    const productExistInCart = this.cartItemList.find(({ title }) => title === product.title);
+  addtoCart(product) {
+    let cartId = localStorage.getItem('cartId');
 
-    if (!productExistInCart) {
-      product.quantity = 1;
-      this.cartItemList.push(product);
-      this.productList.next(this.cartItemList);
-      this.getTotalPrice();
-      return;
+    if (!cartId) {
+      this.db.list('/shoppingcart').push({
+        dateCreated: new Date().getTime()
+      })
+
     }
-    if (typeof productExistInCart.quantity === 'number') {
-      productExistInCart.quantity += 1;
-    } else {
-      productExistInCart.quantity = 1;
-    }
-    this.productList.next(this.cartItemList);
-    this.getTotalPrice();
+
+    // Rest of your code...
   }
+
+
+  // addtoCart(product: any) {
+  //   const productExistInCart = this.cartItemList.find(({ title }) => title === product.title);
+
+  //   if (!productExistInCart) {
+  //     product.quantity = 1;
+  //     this.cartItemList.push(product);
+  //     this.productList.next(this.cartItemList);
+  //     this.getTotalPrice();
+  //     return;
+  //   }
+  //   if (typeof productExistInCart.quantity === 'number') {
+  //     productExistInCart.quantity += 1;
+  //   } else {
+  //     productExistInCart.quantity = 1;
+  //   }
+  //   this.productList.next(this.cartItemList);
+  //   this.getTotalPrice();
+  // }
 
 
   getTotalPrice(): number {
